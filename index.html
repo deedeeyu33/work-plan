@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美国创业与贸易公司 · 整体工作计划</title>
+<style>
+  /* ===== Reset & Base ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 22px; }
+  body {
+    font-family: "Noto Serif SC", "Songti SC", "Georgia", "Times New Roman", serif;
+    color: #1a1008; background: #f8f5f0; line-height: 1.65;
+    display: flex; min-height: 100vh;
+  }
+
+  /* ===== Sidebar ===== */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 240px;
+    background: #f5f0e8; z-index: 100; overflow: hidden;
+    border-right: 1px solid #e8e0d5; display: flex; flex-direction: column;
+    flex-shrink: 0;
+  }
+  .sidebar-header {
+    padding: 36px 20px 18px; border-bottom: 1px solid #e8e0d5; position: relative;
+  }
+  .sidebar-header::after {
+    content: ''; position: absolute; bottom: -1px; left: 20px; right: 20px;
+    height: 1px; background: #d4a76a; opacity: 0.4;
+  }
+  .sidebar-header h1 { font-size: 0.85rem; font-weight: 700; color: #8b6914; letter-spacing: 2px; }
+  .sidebar-header .date { font-size: 0.68rem; color: #a09888; margin-top: 4px; }
+  .sidebar-nav { padding: 6px 0; flex: 1; }
+  .sidebar-nav a {
+    display: block; padding: 5px 20px; font-size: 0.78rem; color: #6a5a4a;
+    text-decoration: none; transition: all 0.25s;
+    font-family: -apple-system, "PingFang SC", sans-serif; letter-spacing: 0.3px;
+    border-right: 2px solid transparent;
+  }
+  .sidebar-nav a:hover { color: #8b6914; background: rgba(139,105,20,0.04); }
+  .sidebar-nav a.active {
+    color: #8b6914; background: rgba(139,105,20,0.06);
+    border-right-color: #d4a76a; font-weight: 600;
+  }
+  .sidebar-footer {
+    padding: 16px 20px; border-top: 1px solid #e8e0d5; text-align: center;
+    font-size: 0.55rem; color: #c8c0b0; font-family: -apple-system, "PingFang SC", sans-serif;
+    letter-spacing: 1px;
+  }
+  .sidebar-section {
+    font-size: 0.6rem; color: #a09888; padding: 10px 20px 3px;
+    letter-spacing: 2px; font-family: -apple-system, "PingFang SC", sans-serif;
+    border-top: 1px solid #e8e0d5; margin-top: 4px;
+  }
+
+  /* ===== Main ===== */
+  .main { margin-left: 240px; flex: 1; max-width: 100%; min-width: 0; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background: #f5f0e8; padding: 56px 48px 36px;
+    border-bottom: 1px solid #e8e0d5; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; left: 48px; right: 48px;
+    height: 3px; background: linear-gradient(90deg, transparent, #d4a76a, transparent);
+  }
+  .hero::after {
+    content: '◆'; position: absolute; top: 10px; right: 48px;
+    font-size: 0.5rem; color: #d4a76a; opacity: 0.15;
+  }
+  .hero h1 { font-size: 1.8rem; font-weight: 700; color: #2c2416; letter-spacing: 2px; margin-bottom: 4px; }
+  .hero .subtitle { font-size: 0.8rem; color: #a09888; margin-bottom: 16px; font-family: -apple-system, "PingFang SC", sans-serif; }
+  .hero .principle {
+    font-size: 0.86rem; color: #5a4a3a; line-height: 1.6;
+    padding: 10px 16px; background: #f0ebe2; display: inline-block;
+    border-left: 2px solid #d4a76a;
+  }
+
+  /* ===== Container ===== */
+  .container { max-width: 880px; padding: 36px 48px 80px; position: relative; }
+  .container::before {
+    content: ''; position: absolute; top: 36px; right: 48px;
+    width: 60px; height: 60px;
+    background: radial-gradient(circle, rgba(212,167,106,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ===== Section Titles ===== */
+  .section-title {
+    font-size: 1.15rem; font-weight: 700; color: #2c2416;
+    margin: 36px 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid #e8e0d5; letter-spacing: 1.5px;
+    position: relative;
+  }
+  .section-title::after {
+    content: ''; position: absolute; bottom: -1px; left: 0;
+    width: 40px; height: 2px; background: #d4a76a;
+  }
+  .section-title .num { color: #d4a76a; margin-right: 6px; font-weight: 600; }
+
+  .sub-title { font-size: 0.92rem; font-weight: 600; color: #3a2a1a; margin: 20px 0 6px; letter-spacing: 0.8px; }
+  .sub-sub-title { font-size: 0.82rem; font-weight: 600; color: #5a4a3a; margin: 16px 0 6px; }
+  p { margin-bottom: 8px; color: #3a2a1a; font-size: 0.86rem; line-height: 1.7; }
+  ul, ol { margin: 4px 0 8px 20px; color: #3a2a1a; font-size: 0.86rem; }
+  li { margin-bottom: 2px; line-height: 1.7; }
+
+  /* ===== Weekly Calendar ===== */
+  .tab-intro { font-size: 0.8rem; color: #7a6a5a; margin-bottom: 18px; font-style: italic; }
+
+  .month-group { margin-bottom: 24px; padding: 8px 12px; border-radius: 6px; transition: background 0.2s; }
+  .month-group:nth-child(even) { background: rgba(212,167,106,0.03); }
+  .month-header { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .month-label { font-size: 0.95rem; font-weight: 700; color: #8b6914; letter-spacing: 2px; white-space: nowrap; }
+  .month-label::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #d4a76a; margin-right: 8px; vertical-align: middle; }
+  .month-line { flex: 1; height: 1px; background: linear-gradient(90deg, #e8e0d5, transparent); }
+
+  .week-card {
+    background: #faf7f2; border: 1px solid #ece5da; padding: 12px 18px;
+    margin-bottom: 6px; display: flex; gap: 16px; transition: all 0.2s;
+  }
+  .week-card:hover { background: #f5f0e8; border-color: #d4a76a; }
+  .week-card.gate { border-top: 2px solid #b85450; background: #faf5f2; }
+
+  .week-dates {
+    min-width: 74px; font-size: 0.72rem; color: #8b6914;
+    font-weight: 600; white-space: nowrap; padding-top: 2px;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .week-content { flex: 1; min-width: 0; }
+  .week-title { font-size: 0.85rem; font-weight: 700; color: #2c2416; margin-bottom: 2px; letter-spacing: 0.2px; }
+  .week-tasks { margin: 2px 0 0; padding: 0; list-style: none; }
+  .week-tasks li {
+    font-size: 0.78rem; color: #5a4a3a; margin-bottom: 0;
+    padding-left: 12px; position: relative; font-family: -apple-system, "PingFang SC", sans-serif; line-height: 1.6;
+  }
+  .week-tasks li::before {
+    content: ''; position: absolute; left: 0; top: 9px;
+    width: 3px; height: 3px; border-radius: 50%; background: #d4a76a;
+  }
+  .week-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
+
+  .tag {
+    display: inline-block; padding: 1px 7px; border-radius: 2px;
+    font-size: 0.7rem; font-family: -apple-system, "PingFang SC", sans-serif;
+    letter-spacing: 0.3px; font-weight: 500;
+  }
+  .tag-product { background: #e8eef0; color: #5a7a7a; }
+  .tag-customer { background: #eaf0e8; color: #5a7a5a; }
+  .tag-company { background: #f0ece0; color: #8a7a4a; }
+  .tag-personal { background: #eee8f0; color: #7a6a8a; }
+  .tag-finance { background: #f0ece8; color: #8a6a4a; }
+  .tag-gate { background: #f0e4e4; color: #a0403a; }
+
+  .gate-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 0.7rem; font-weight: 700; color: #b85450;
+    font-family: -apple-system, "PingFang SC", sans-serif; letter-spacing: 1px;
+    margin-left: 4px;
+  }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; padding: 10px 14px; background: #faf7f2; border: 1px solid #ece5da; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.68rem; color: #5a4a3a; font-family: -apple-system, "PingFang SC", sans-serif; }
+
+  /* ===== Decision Gates ===== */
+  .gate-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .gate-card {
+    background: #faf5f2; border: 1px solid #e0d0c8; border-top: 2px solid #b85450;
+    padding: 16px 20px; transition: all 0.2s;
+  }
+  .gate-card:hover { background: #f5f0e8; }
+  .gate-card .g-label {
+    font-size: 0.65rem; font-weight: 700; color: #b85450; letter-spacing: 3px;
+    margin-bottom: 3px; font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .gate-card .g-label::before {
+    content: '◇ '; font-size: 0.55rem;
+  }
+  .gate-card .g-title { font-weight: 700; color: #2c2416; font-size: 0.9rem; margin-bottom: 4px; }
+  .gate-card .g-desc { color: #5a4a3a; font-size: 0.8rem; font-family: -apple-system, "PingFang SC", sans-serif; line-height: 1.6; }
+  .gate-card .g-date { font-size: 0.68rem; color: #b85450; font-weight: 600; font-family: -apple-system, "PingFang SC", sans-serif; margin-bottom: 4px; }
+
+  /* ===== Reference ===== */
+  blockquote {
+    background: #f0ebe2; border-left: 2px solid #d4a76a;
+    padding: 10px 16px; margin: 10px 0; color: #3a2a1a;
+    font-size: 0.84rem; line-height: 1.65;
+  }
+  blockquote.principle-block { border-left-color: #b85450; }
+
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.8rem; font-family: -apple-system, "PingFang SC", sans-serif; }
+  th, td { padding: 6px 10px; text-align: left; border: 1px solid #e0d8cc; }
+  th { background: #f0ebe2; font-weight: 600; color: #2c2416; letter-spacing: 1px; font-size: 0.78rem; }
+  td { color: #3a2a1a; }
+  tr:nth-child(even) td { background: #faf7f2; }
+
+  .tag-basic { color: #a09888; font-size: 0.72rem; font-weight: 500; }
+  .tag-normal { color: #8b6914; font-size: 0.72rem; font-weight: 500; }
+  .tag-adv { color: #2c2416; font-weight: 600; font-size: 0.72rem; }
+
+  .goal-card {
+    background: #faf7f2; padding: 14px 18px; margin: 10px 0;
+    border: 1px solid #e8e0d5; border-left: 2px solid #d4a76a;
+  }
+  .goal-card h4 { color: #2c2416; letter-spacing: 0.5px; font-size: 0.88rem; margin-bottom: 4px; }
+  .goal-card p { font-size: 0.8rem; font-family: -apple-system, "PingFang SC", sans-serif; line-height: 1.6; }
+  .goal-card ul { font-size: 0.8rem; font-family: -apple-system, "PingFang SC", sans-serif; line-height: 1.6; }
+
+  .highlight-box {
+    background: #f0ebe2; padding: 10px 16px; margin: 12px 0;
+    border: 1px solid #e0d8cc; font-size: 0.82rem;
+  }
+
+  .fund-card {
+    background: #faf7f2; border: 1px solid #e8e0d5;
+    padding: 12px 16px; margin: 8px 0;
+  }
+  .fund-card h4 { color: #2c2416; font-size: 0.85rem; margin-bottom: 3px; letter-spacing: 0.5px; }
+  .fund-card p { font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #5a4a3a; line-height: 1.55; }
+  .fund-amount {
+    display: inline-block; background: #8b6914; color: #fff;
+    padding: 0 7px; font-size: 0.72rem; border-radius: 2px;
+    font-family: -apple-system, "PingFang SC", sans-serif; font-weight: 600;
+  }
+
+  .tl-inline { margin: 10px 0; }
+  .tl-item {
+    padding: 5px 0 5px 16px; border-left: 1px solid #e0d8cc;
+    position: relative; line-height: 1.55;
+  }
+  .tl-item::before {
+    content: '●'; position: absolute; left: -5px; top: 7px;
+    font-size: 7px; color: #d4a76a; background: #f8f5f0;
+    line-height: 1;
+  }
+  .tl-date { font-size: 0.7rem; color: #d4a76a; font-weight: 600; font-family: -apple-system, "PingFang SC", sans-serif; letter-spacing: 1px; }
+  .tl-title { font-weight: 600; color: #2c2416; font-size: 0.82rem; }
+  .tl-desc { font-size: 0.76rem; color: #7a6a5a; font-family: -apple-system, "PingFang SC", sans-serif; }
+
+  /* ===== Print ===== */
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .hero { padding: 24px 20px; }
+    .container { padding: 20px; max-width: 100%; }
+    .week-card, .gate-card, .goal-card, .fund-card { break-inside: avoid; }
+  }
+
+  /* ===== Mobile ===== */
+  @media (max-width: 768px) {
+    html { font-size: 18px; }
+    body { flex-direction: column; }
+    .sidebar {
+      position: relative; width: 100%; height: auto; max-height: none;
+      border-right: none; border-bottom: 1px solid #e8e0d5;
+    }
+    .sidebar-header { padding: 16px 16px 10px; }
+    .sidebar-nav { display: flex; flex-wrap: wrap; padding: 2px 6px 8px; }
+    .sidebar-nav a {
+      padding: 6px 10px; border-right: none; font-size: 0.85rem;
+      border-bottom: 2px solid transparent;
+    }
+    .sidebar-nav a.active { border-right-color: transparent; border-bottom-color: #d4a76a; }
+    .sidebar-section { display: none; }
+    .main { margin-left: 0; }
+    .hero { padding: 32px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 24px 16px; }
+    .week-card { flex-direction: column; gap: 4px; }
+    .week-dates { min-width: auto; }
+    .legend { gap: 4px; padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== SIDEBAR ==================== -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h1>工作计划</h1>
+    <div class="date">2026年7月 · 始</div>
+  </div>
+  <div class="sidebar-nav" id="nav">
+    <div class="sidebar-section">核心视图</div>
+    <a href="#calendar" class="active">周历 · 执行时间线</a>
+    <a href="#gates">关键决策门</a>
+    <div class="sidebar-section">战略参考</div>
+    <a href="#sec1">一、创业总体定位</a>
+    <a href="#sec2">二、执行原则</a>
+    <a href="#sec3">三、长期目标</a>
+    <div class="sidebar-section">运营参考</div>
+    <a href="#sec5">五、产品与客户</a>
+    <a href="#sec6">六、专业顾问</a>
+    <a href="#sec7">七、招聘计划</a>
+    <a href="#sec8">八、资金计划</a>
+    <a href="#sec9">九、售后保修</a>
+    <a href="#sec10">十、每周节奏</a>
+    <div class="sidebar-section">检查清单</div>
+    <a href="#sec12">待弄清楚的信息</a>
+    <a href="#sec13">执行标准</a>
+  </div>
+  <div class="sidebar-footer">计划 · 2026</div>
+</nav>
+
+<!-- ==================== MAIN ==================== -->
+<div class="main">
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <h1>美国创业与贸易公司</h1>
+    <p class="subtitle">整体工作计划 · 2026年7月23日</p>
+    <div class="principle"><strong>2026年核心原则：</strong>先验证，再投入；先跑通一个业务，再扩展。</div>
+  </header>
+
+  <div class="container">
+
+    <!-- ================================================================ -->
+    <!-- 周历                                                             -->
+    <!-- ================================================================ -->
+    <section id="calendar">
+      <h2 class="section-title"><span class="num">&#9670;</span>周历 · 执行时间线</h2>
+      <p class="tab-intro">从7月到12月，每一周的核心任务。色标帮助区分不同类型的工作。</p>
+
+      <div class="legend">
+        <span class="legend-item"><span class="tag tag-product">产品·技术</span></span>
+        <span class="legend-item"><span class="tag tag-customer">客户·市场</span></span>
+        <span class="legend-item"><span class="tag tag-company">公司·法务</span></span>
+        <span class="legend-item"><span class="tag tag-personal">个人·生活</span></span>
+        <span class="legend-item"><span class="tag tag-finance">资金·财务</span></span>
+        <span class="legend-item"><span class="tag tag-gate">决策门</span></span>
+      </div>
+
+      <!-- 7月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">七月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">7/23 — 7/27</div>
+          <div class="week-content">
+            <div class="week-title">总规划与资料框架</div>
+            <ul class="week-tasks">
+              <li>建立创业项目文件夹 &amp; 任务管理表</li>
+              <li>准备30秒 / 2分钟 / 5分钟创业介绍</li>
+              <li>准备3~5个宽泛公司名称</li>
+              <li>设计江西学习清单 &amp; 工厂案例数据表</li>
+              <li>向供应商索取基础技术资料</li>
+              <li>搭建网站页面结构</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-product">产品·技术</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">7/28 — 7/31</div>
+          <div class="week-content">
+            <div class="week-title">香港办理中国签证</div>
+            <ul class="week-tasks">
+              <li>主线：中国签证</li>
+              <li>每天30~60分钟轻任务：整理公司名称、跟供应商交流、确定江西日期</li>
+              <li>整理网站参考案例</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-personal">个人·生活</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">八月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">8/1 — 8/2</div>
+          <div class="week-content">
+            <div class="week-title">中间整理</div>
+            <ul class="week-tasks">
+              <li>检查供应商资料，确定江西学习日期</li>
+              <li>确定爸爸工厂测试日期</li>
+              <li>准备深圳CEO活动项目介绍</li>
+              <li>列出希望通过活动验证的5个商业问题</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-product">产品·技术</span>
+              <span class="tag tag-customer">客户·市场</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">8/3 — 8/7</div>
+          <div class="week-content">
+            <div class="week-title">深圳 · 剑桥CEO活动</div>
+            <ul class="week-tasks">
+              <li>练习介绍创业项目，记录最常被问的问题</li>
+              <li>认识制造业、供应链、美国市场相关人士</li>
+              <li>活动后形成一页总结：吸引力、质疑点、最大风险、待验证问题</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-personal">个人·生活</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">8/8 — 8/17</div>
+          <div class="week-content">
+            <div class="week-title">江西学习 &amp; 爸爸工厂案例 <span class="gate-badge">&#9670; 决策门一</span></div>
+            <ul class="week-tasks">
+              <li>2~3天完整学习：操作、参数设置、安全事项、故障处理</li>
+              <li>完成爸爸工厂真实案例，记录传统 vs 激光清洗对照测试数据</li>
+              <li>拍摄清洗前后视频和照片</li>
+              <li>获取标准操作流程、常见故障表、备件清单</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-product">产品·技术</span>
+              <span class="tag tag-gate">决策门</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">8/18 — 8/24</div>
+          <div class="week-content">
+            <div class="week-title">建立最小经营系统</div>
+            <ul class="week-tasks">
+              <li>英文案例报告 V1</li>
+              <li>一页英文销售介绍</li>
+              <li>简单公司网站 V1</li>
+              <li>客户访谈脚本</li>
+              <li>筛选30~50家潜在客户，建立简单CRM</li>
+              <li>初步成本与报价表</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-product">产品·技术</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">8/25 — 8/27</div>
+          <div class="week-content">
+            <div class="week-title">香港展会</div>
+            <ul class="week-tasks">
+              <li>观察工业产品展示、投资回报解释方式</li>
+              <li>学习如何收集客户信息、介绍售后</li>
+              <li>创业轻任务：修改网站、整理客户名单</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-product">产品·技术</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">8/28 — 9/4</div>
+          <div class="week-content">
+            <div class="week-title">赴美基础准备 <span class="gate-badge">&#9670; 决策门二</span></div>
+            <ul class="week-tasks">
+              <li>确定2~3个最终公司名称，比较候选注册州</li>
+              <li>整理EIN、公司银行账户文件</li>
+              <li>准备加拿大护照、境外地址证明、银行账单</li>
+              <li>整理美国期间生活预算、第一批客户访谈名单</li>
+              <li>整理身份、税务、进口问题清单（暂不找顾问）</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-personal">个人·生活</span>
+              <span class="tag tag-gate">决策门</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">九月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">9/5 — 9/11</div>
+          <div class="week-content">
+            <div class="week-title">赴美个人基础落地</div>
+            <ul class="week-tasks">
+              <li>激活美国手机号</li>
+              <li>办理个人银行账户</li>
+              <li>建立个人费用记录</li>
+              <li>开始第一轮客户电话 &amp; 线上访谈</li>
+              <li>继续准备公司注册材料</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-personal">个人·生活</span>
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">9/12 — 9/20</div>
+          <div class="week-content">
+            <div class="week-title">客户验证 &amp; 公司落地（一）</div>
+            <ul class="week-tasks">
+              <li>联系10~20家目标客户，完成3~6次有效访谈</li>
+              <li>确认客户清洗方式、频率、痛点、预算</li>
+              <li>根据客户分布确定注册州</li>
+              <li>注册公司、申请EIN</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">9/21 — 9/27</div>
+          <div class="week-content">
+            <div class="week-title">客户验证 &amp; 公司落地（二）</div>
+            <ul class="week-tasks">
+              <li>持续客户访谈，优化销售表达</li>
+              <li>准备公司银行账户</li>
+              <li>建立基础会计记录</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">9/28 — 9/30</div>
+          <div class="week-content">
+            <div class="week-title">客户验证（月末冲刺）</div>
+            <ul class="week-tasks">
+              <li>完成月度目标：累计15~25次有效客户联系</li>
+              <li>整理9月验证结果</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">十月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">10/1 — 10/10</div>
+          <div class="week-content">
+            <div class="week-title">经营区域与下一阶段决策</div>
+            <ul class="week-tasks">
+              <li>根据客户分布决定长期经营州</li>
+              <li>评估演示机放置、车辆、仓储需求</li>
+              <li>决定10月17日后住宿安排</li>
+              <li>评估E-2路径可行性</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-personal">个人·生活</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">10/11 — 10/17</div>
+          <div class="week-content">
+            <div class="week-title">阶段复盘 <span class="gate-badge">&#9670; 决策门三</span></div>
+            <ul class="week-tasks">
+              <li>形成《美国市场验证报告》</li>
+              <li>评估：15+有效访谈？3+合格机会？2+愿意试洗的客户？</li>
+              <li>判断：继续、调整还是暂停？</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-gate">决策门</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">10/18 — 10/31</div>
+          <div class="week-content">
+            <div class="week-title">专业确认 &amp; Rotoplas准备</div>
+            <ul class="week-tasks">
+              <li>联系E-2移民律师（身份、工作边界）</li>
+              <li>联系跨境CPA（税务、记账、资金路径）</li>
+              <li>准备Rotoplas资料：一页介绍、案例报告、清洗视频</li>
+              <li>提前联系10~20家目标滚塑企业</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-finance">资金·财务</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">十一月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">11/1 — 11/15</div>
+          <div class="week-content">
+            <div class="week-title">Rotoplas最后准备</div>
+            <ul class="week-tasks">
+              <li>完善英文公司介绍和解决方案</li>
+              <li>制作电子名片</li>
+              <li>确定重点企业名单和访谈问题</li>
+              <li>争取预约5~10次展会简短交流</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-company">公司·法务</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">11/16 — 11/19</div>
+          <div class="week-content">
+            <div class="week-title">Rotoplas 2026 · 新奥尔良 <span class="gate-badge">&#9670; 决策门四</span></div>
+            <ul class="week-tasks">
+              <li>完成15次以上有意义的行业交流</li>
+              <li>与5家以上潜在客户建立后续联系</li>
+              <li>确认滚塑行业采购决策流程</li>
+              <li>了解模具清洗方法、频率、成本</li>
+              <li>展会后72小时内完成跟进</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-gate">决策门</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">11/20 — 11/30</div>
+          <div class="week-content">
+            <div class="week-title">首单推进</div>
+            <ul class="week-tasks">
+              <li>确认产品进口合规路径</li>
+              <li>联系合规顾问、报关行、保险经纪</li>
+              <li>核算关税、运输和保险成本</li>
+              <li>完成演示或销售合同模板</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-finance">资金·财务</span>
+              <span class="tag tag-product">产品·技术</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12月 -->
+      <div class="month-group">
+        <div class="month-header">
+          <span class="month-label">十二月</span>
+          <span class="month-line"></span>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">12/1 — 12/31</div>
+          <div class="week-content">
+            <div class="week-title">首单冲刺 &amp; 年度决策 <span class="gate-badge">&#9670; 决策门五</span></div>
+            <ul class="week-tasks">
+              <li>争取首批订单</li>
+              <li>确定正式售价、单台毛利</li>
+              <li>建立备件和售后方案</li>
+              <li>准备E-2商业计划</li>
+              <li>制定2027年销售、资金和招聘计划</li>
+              <li>判断：客户愿付钱？进口可行？毛利成立？售后可承担？业务可复制？</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-finance">资金·财务</span>
+              <span class="tag tag-company">公司·法务</span>
+              <span class="tag tag-customer">客户·市场</span>
+              <span class="tag tag-gate">决策门</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 关键决策门                                                         -->
+    <!-- ================================================================ -->
+    <section id="gates">
+      <h2 class="section-title"><span class="num">&#9670;</span>关键决策门</h2>
+      <p class="tab-intro">全年五个决策门，每个结论决定是否继续、调整方向或暂停投入。</p>
+
+      <div class="gate-grid">
+        <div class="gate-card">
+          <div class="g-label">决策门一</div>
+          <div class="g-date">8月17日</div>
+          <div class="g-title">设备是否有效、稳定且基本安全？</div>
+          <div class="g-desc">清洗效果是否稳定？是否会明显损伤目标模具？是否可以形成可信案例？供应商是否愿意长期支持？基础售后是否可行？</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门二</div>
+          <div class="g-date">9月4日</div>
+          <div class="g-title">赴美基础准备是否完成？</div>
+          <div class="g-desc">产品学习 + 工厂案例 + 网站和介绍材料 + 客户名单 + 赴美文件。此时不要求解决全部法律和税务问题。</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门三</div>
+          <div class="g-date">10月17日</div>
+          <div class="g-title">美国市场验证是否通过？</div>
+          <div class="g-desc">至少15次有效客户访谈、3个合格机会、2个愿意进一步试洗或评估的客户、清晰的客户痛点、购买参与人、初步价格反馈。未通过则调整策略，而非继续扩大投入。</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门四</div>
+          <div class="g-date">Rotoplas结束后</div>
+          <div class="g-title">滚塑行业是否值得作为2027年重点？</div>
+          <div class="g-desc">客户是否普遍认可清洗问题？是否愿意进一步试用？主要采购障碍是什么？是否值得2027年正式参展？</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门五</div>
+          <div class="g-date">2026年12月底</div>
+          <div class="g-title">2026年是否已证明业务可行？</div>
+          <div class="g-desc">客户愿意付钱 + 产品可合法进口和交付 + 单台毛利基本成立 + 售后责任可承担 + 市场不只依赖单一关系 + 业务有继续复制的可能。通过则2027年扩大投资、增加产品和招聘。</div>
+        </div>
+      </div>
+
+      <div class="sub-title" style="margin-top:28px;">投入顺序</div>
+      <blockquote>证明设备有效 → 做出可信案例 → 证明目标客户有问题 → 证明客户愿意试用或进一步了解 → 确认进口与安全可行 → 证明客户愿意付钱 → 证明毛利和售后可承担 → 扩大销售、产品和团队</blockquote>
+
+      <div class="sub-title">2026年成功标准</div>
+      <blockquote class="principle-block">
+        <strong>最低标准：</strong>知道目标客户是谁、问题是否真实、设备是否有效、客户是否愿意继续试用或付钱，以及这项业务是否值得在2027年扩大。<br><br>
+        <strong>理想成果：</strong>在完成上述验证的基础上，获得首批付费订单，并建立可以继续执行的公司、进口、销售和售后路径。
+      </blockquote>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 一：创业总体定位                                                   -->
+    <!-- ================================================================ -->
+    <section id="sec1">
+      <h2 class="section-title"><span class="num">一</span>创业总体定位</h2>
+
+      <div class="sub-title">1. 长期公司定位</div>
+      <p>建立一家由本人独立拥有和管理、以中国供应链为基础、面向美国市场开展产品销售、贸易、市场进入及相关商业服务的公司。</p>
+      <p>公司长期不局限于：工业设备、激光清洗机、塑料加工行业、单一产品、单一销售模式。</p>
+      <p>未来可能开展：中国产品在美国的进口、代理和销售；针对美国企业的产品与解决方案；产品选型、试用、培训和售后；中国供应链采购与美国市场进入服务；品牌代理；其他通过市场验证的新产品与新项目。</p>
+
+      <div class="sub-title">2. 第一阶段业务切入口</div>
+      <blockquote><strong>第一阶段项目：</strong>以激光清洗设备为工具，为美国滚塑、塑料加工、橡胶加工及模具相关企业提供模具清洗、残留物去除和生产效率改善解决方案。</blockquote>
+      <p>2026年优先客户：滚塑生产企业、其他塑料加工企业、橡胶加工企业、模具制造/维修和使用企业。暂不主动开发其他激光清洗行业。</p>
+
+      <div class="sub-title">3. 公司提供的不只是机器</div>
+      <ol>
+        <li>了解客户当前如何清洗模具</li>
+        <li>判断污染物、材料和表面是否适合激光清洗</li>
+        <li>进行样品试洗或后续现场验证</li>
+        <li>比较传统方法和激光清洗的时间、人工、耗材及停机成本</li>
+        <li>推荐适合的设备型号和参数</li>
+        <li>销售设备和必要的安全配套</li>
+        <li>提供操作培训</li>
+        <li>提供有限保修、远程诊断和备件支持</li>
+        <li>根据同一批客户的真实需求，未来增加相关测试、维护或辅助设备</li>
+      </ol>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 二：执行原则                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec2">
+      <h2 class="section-title"><span class="num">二</span>2026年创业执行原则</h2>
+
+      <div class="sub-title">1. 公司做宽，业务做窄</div>
+      <p>公司名称保持宽泛；2026年对外销售表达保持具体；不把公司永久限定为激光设备公司；也不向客户表达为"什么都卖的贸易公司"。</p>
+
+      <div class="sub-title">2. 必须完成的内容</div>
+      <ul>
+        <li>学会操作和基础调试机器</li>
+        <li>完成真实工厂案例</li>
+        <li>验证美国客户需求</li>
+        <li>注册美国公司并建立收款能力</li>
+        <li>个人账户和公司账户分离</li>
+        <li>正式进口前确认产品合规和安全</li>
+        <li>正式销售前明确合同、保修和售后责任</li>
+        <li>算清售价、落地成本、毛利和现金流</li>
+        <li>明确本人能够在美国开展哪些活动</li>
+      </ul>
+
+      <div class="sub-title">3. 可以推迟的内容</div>
+      <p>2026年前期暂不处理：独立产品品牌、联邦商标注册、多个DBA、第二家LLC、豪华网站、办公室、长期仓库、大量库存、助理、全职员工、全职销售团队、其他行业探索、同时开发多条产品线。</p>
+
+      <div class="sub-title">4. 投入顺序</div>
+      <blockquote>证明设备有效 → 做出可信案例 → 证明目标客户有问题 → 证明客户愿意试用或进一步了解 → 确认进口与安全可行 → 证明客户愿意付钱 → 证明毛利和售后可承担 → 扩大销售、产品和团队</blockquote>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 三：长期目标                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec3">
+      <h2 class="section-title"><span class="num">三</span>2026年至2029年长期目标</h2>
+      <div class="highlight-box">以下数字是第一版经营假设，必须在2026年10月17日完成美国市场验证后重新评估。</div>
+
+      <div class="goal-card">
+        <h4>2026年：完成基础搭建与首轮验证</h4>
+        <p><strong>产品与客户：</strong>掌握设备操作，完成1个真实工厂案例，15~25次有效客户访谈，3~8个试洗/演示机会，1~3个付费订单。</p>
+        <p><strong>公司：</strong>成立100%持有的美国公司，取得EIN，建立公司和个人银行账户，建立会计记录，明确进口销售路径，完成E-2可行性评估。</p>
+        <p><strong>财务：</strong>不以盈利为标准，算清售价、单台落地成本、毛利、试洗成本、获客成本、销售周期、保修成本、盈亏平衡销量。</p>
+      </div>
+
+      <div class="goal-card">
+        <h4>2027年：跑通可复制的业务闭环</h4>
+        <p><strong>销售：</strong>8~15台核心设备，8~12家真实付费客户，获得转介绍。建立标准化流程。</p>
+        <p><strong>财务：</strong>年度毛利润为正，保留3~6个月运营资金。</p>
+        <p><strong>产品：</strong>验证1~3种相关测试、维护或辅助小设备。新产品优先销售给现有客户群。</p>
+        <p><strong>招聘：</strong>考虑兼职/远程助理，项目制技术支持，0~1名正式员工。</p>
+      </div>
+
+      <div class="goal-card">
+        <h4>2028年：建立稳定产品组合和小型团队</h4>
+        <p>销售规模达2027年1.5~2.5倍，形成2~3类产品，团队约3~5人，公司日常不再完全依赖创始人。</p>
+      </div>
+
+      <div class="goal-card">
+        <h4>2029年前后：减少创始人日常执行</h4>
+        <p>稳定客户和交付体系，创始人负责战略、关键客户、供应商关系和新项目。</p>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 五：产品与客户                                                     -->
+    <!-- ================================================================ -->
+    <section id="sec5">
+      <h2 class="section-title"><span class="num">五</span>产品与客户发展计划</h2>
+
+      <div class="sub-title">1. 2026年客户范围</div>
+      <p>只验证：滚塑生产企业、塑料加工企业、橡胶加工企业、模具制造/维修/使用企业。不设探索组，不主动分散到其他行业。选择标准：清洗痛点明显、频率较高、停机成本高、易理解激光清洗价值。</p>
+
+      <div class="sub-title">2. 小型测试和辅助设备</div>
+      <p>2026年只记录需求，不增加产品。重点记录客户使用的检测设备、采购价格高或易损坏的产品、可一起交付的产品、被反复提及的需求。2027年再选择1~3种验证。</p>
+
+      <div class="sub-title">3. 品牌节奏</div>
+      <p><strong>2026年：</strong>一个宽泛公司名称 + 一个简单网站，不建独立品牌、不申请商标、不设置多个DBA。<strong>出现稳定订单后：</strong>再决定是否建立业务品牌、申请商标、拆分公司。</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 六：专业顾问                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec6">
+      <h2 class="section-title"><span class="num">六</span>专业顾问时间线</h2>
+
+      <div class="tl-inline">
+        <div class="tl-item">
+          <div class="tl-date">7~8月</div>
+          <div class="tl-title">记录问题阶段</div>
+          <div class="tl-desc">不集中寻找顾问，只记录需要确认的问题</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">9月下旬~10月</div>
+          <div class="tl-title">优先联系</div>
+          <div class="tl-desc">第一优先：移民律师（身份、工作边界、E-2路径）。第二优先：跨境CPA（税务、记账、资金记录、收入方式）</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">运机器前</div>
+          <div class="tl-title">进口准备</div>
+          <div class="tl-desc">激光产品合规顾问、报关行、产品责任保险经纪</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">签约前</div>
+          <div class="tl-title">合同审查</div>
+          <div class="tl-desc">商业律师审查：试洗协议、演示责任、销售合同、付款退款、验收、保修、责任限制</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 七：招聘计划                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec7">
+      <h2 class="section-title"><span class="num">七</span>招聘计划</h2>
+
+      <div class="sub-title">2026年</div>
+      <p>不招聘助理，不招聘美国全职员工。本人主导全部工作。必要时购买短期项目服务：网站排版、视频剪辑、英文校对、临时技术支持。</p>
+
+      <div class="sub-title">2027年再考虑助理</div>
+      <p>条件：每周行政工作超过8~12小时并影响客户开发，CRM和行程有固定流程，公司可承担至少6个月成本。</p>
+
+      <div class="sub-title">技术人员</div>
+      <p>条件：有2~3个真实演示，获得第一笔订单，客户要求美国本地技术支持。</p>
+
+      <div class="sub-title">第一名全职员工</div>
+      <p>条件：已有真实付费客户，有明确未来工作量，招聘后仍有6个月以上运营资金，岗位可明显提高销售、交付或客户体验。</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 八：资金计划                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec8">
+      <h2 class="section-title"><span class="num">八</span>资金计划</h2>
+
+      <div class="fund-card">
+        <h4>第一阶段 <span class="fund-amount">10万~20万元</span></h4>
+        <p>7月~10月：江西学习、工厂案例、网站和销售资料、公司基础准备、美国差旅和生活、手机与银行、客户拜访、基础样品和材料</p>
+      </div>
+      <div class="fund-card">
+        <h4>第二阶段 <span class="fund-amount">25万~45万元</span></h4>
+        <p>启动条件：产品案例可信 + 3~5个真实客户机会 + 客户愿意进一步试洗或演示 + 初步确认进口和安全可行。用途：演示设备、安全附件、烟尘处理、运输和报关、专业顾问、产品责任保险、备件、车辆或运输方案</p>
+      </div>
+      <div class="fund-card">
+        <h4>第三阶段 <span class="fund-amount">30万~60万元</span></h4>
+        <p>启动条件：获得订单 / 确定正式E-2方案 / 市场反馈明显支持扩大。用途：运营储备、备用设备、E-2申请、展会、备件库存、2027年新产品验证、后续招聘</p>
+      </div>
+
+      <blockquote><strong>第一年暂定资金授权上限：65万~125万元人民币，分阶段释放。</strong></blockquote>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 九：售后保修                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec9">
+      <h2 class="section-title"><span class="num">九</span>售后与保修计划</h2>
+      <p>12个月有限保修。三级支持体系：</p>
+      <ul>
+        <li><strong>一级：远程诊断</strong>：视频检查、报警记录、参数日志、指导更换小配件</li>
+        <li><strong>二级：模块替换</strong>：镜片、激光头配件、控制器、电源模块、水冷配件、开关急停线缆</li>
+        <li><strong>三级：备用机或整机替换</strong>：重大故障且无法合理修复时</li>
+      </ul>
+      <p>供应商应提供比客户保修期更长的支持，或提供明确免费备件额度。</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 十：每周节奏                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec10">
+      <h2 class="section-title"><span class="num">十</span>每周工作节奏</h2>
+
+      <p>每周设置：<strong>1个核心成果</strong> + <strong>3项关键行动</strong> + 不超过<strong>5项维持性任务</strong>。</p>
+
+      <div class="sub-title">每周固定节奏</div>
+      <ul>
+        <li><strong>周一：</strong>确定本周核心成果</li>
+        <li><strong>周三：</strong>检查产品、客户和公司三条线的障碍</li>
+        <li><strong>周五：</strong>复盘成果、数据和问题</li>
+        <li><strong>月底：</strong>调整下个月目标</li>
+      </ul>
+
+      <div class="sub-title">工作量原则</div>
+      <p><strong>普通周：</strong>1项核心成果，3项关键行动，不超过5项维持性任务。</p>
+      <p><strong>差旅周：</strong>香港、深圳、江西、展会等周，主行程优先，只保留1项轻量成果，不熬夜补做。</p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 十二：待弄清楚的信息                                                -->
+    <!-- ================================================================ -->
+    <section id="sec12">
+      <h2 class="section-title"><span class="num">十二</span>目前仍需弄清楚的信息</h2>
+
+      <div class="sub-sub-title">8月17日前</div>
+      <ul>
+        <li>设备确切型号、功率、波长和激光等级</li>
+        <li>包装尺寸、重量和美国电源</li>
+        <li>爸爸工厂传统清洗与激光清洗数据</li>
+        <li>供应商售后和备件能力</li>
+        <li>设备清洗效果是否稳定</li>
+        <li>哪类模具最适合</li>
+      </ul>
+
+      <div class="sub-sub-title">9月至10月客户验证期间</div>
+      <ul>
+        <li>客户现有清洗方式</li>
+        <li>谁提出需求、谁使用设备、谁批准购买</li>
+        <li>可以接受的价格</li>
+        <li>是否必须现场演示</li>
+        <li>典型销售周期</li>
+        <li>客户集中在哪些州</li>
+        <li>公司最适合在哪里落地</li>
+      </ul>
+
+      <div class="sub-sub-title">公司正式收款前</div>
+      <ul>
+        <li>LLC注册、EIN、公司银行账户</li>
+        <li>基础税务和会计要求</li>
+        <li>爸爸资金如何记录</li>
+        <li>客户付款和退款规则</li>
+      </ul>
+
+      <div class="sub-sub-title">机器运往美国前</div>
+      <ul>
+        <li>FDA与其他产品合规</li>
+        <li>HS编码和关税、进口主体、报关行</li>
+        <li>产品责任保险</li>
+        <li>激光现场安全、烟尘净化</li>
+        <li>备件与维修、供应商质量和售后责任</li>
+      </ul>
+
+      <div class="sub-sub-title">第一次正式报价和合同前</div>
+      <ul>
+        <li>正式售价、单台毛利、订金比例</li>
+        <li>演示是否收费、付款节点</li>
+        <li>退款和取消、交付验收</li>
+        <li>保修排除、责任限制</li>
+      </ul>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 十三：执行标准                                                     -->
+    <!-- ================================================================ -->
+    <section id="sec13">
+      <h2 class="section-title"><span class="num">十三</span>计划完整性与执行标准</h2>
+
+      <p>本计划已覆盖：长期公司目标、2026年至2029年经营目标、产品和客户、公司注册与收款、个人赴美落地、身份与税务、进口与合规、资金投入、售后和保修、招聘、新产品、Rotoplas、周度执行、继续或停止的决策标准。目前没有重大板块遗漏。</p>
+
+      <blockquote class="principle-block">
+        <strong>2026年成功的最低标准</strong>不是卖出很多台设备，而是：知道目标客户是谁、问题是否真实、设备是否有效、客户是否愿意继续试用或付钱，以及这项业务是否值得在2027年扩大。<br><br>
+        <strong>2026年理想成果：</strong>在完成上述验证的基础上，获得首批付费订单，并建立可以继续执行的公司、进口、销售和售后路径。
+      </blockquote>
+    </section>
+
+    <p style="text-align:center;margin-top:48px;font-size:0.75rem;color:#a09888;">&mdash; 计划完成 &mdash;</p>
+
+  </div><!-- /container -->
+</div><!-- /main -->
+
+<script>
+(function() {
+  const navLinks = document.querySelectorAll('#nav a');
+  const sections = [];
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      if (el) sections.push({ el, link: a });
+    }
+  });
+
+  function updateActive() {
+    const scrollY = window.scrollY + 90;
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.el.offsetTop <= scrollY) current = s;
+    }
+    navLinks.forEach(a => a.classList.remove('active'));
+    if (current) current.link.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const el = document.getElementById(href.slice(1));
+        if (el) {
+          const top = el.offsetTop - 20;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
