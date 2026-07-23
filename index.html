@@ -311,6 +311,103 @@
   .ref-card h4 { color: #2c2416; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
   .ref-card p { font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #5a4a3a; line-height: 1.55; margin: 0; }
 
+  /* ===== SOP Workbench ===== */
+  .sop-intro {
+    font-size: 0.82rem; color: #5a4a3a; line-height: 1.7;
+    padding: 12px 16px; background: #f0ebe2; border-left: 2px solid #d4a76a;
+    margin-bottom: 20px;
+  }
+  .sop-category-nav {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px;
+  }
+  .sop-category-nav a {
+    display: inline-block; padding: 5px 12px; font-size: 0.72rem;
+    font-family: -apple-system, "PingFang SC", sans-serif; color: #6a5a4a;
+    background: #faf7f2; border: 1px solid #ece5da; text-decoration: none;
+    border-radius: 3px; transition: all 0.2s;
+  }
+  .sop-category-nav a:hover { background: #f0ebe2; border-color: #d4a76a; color: #8b6914; }
+  .sop-category { margin-bottom: 28px; }
+  .sop-category-title {
+    font-size: 0.92rem; font-weight: 700; color: #8b6914;
+    padding-bottom: 6px; border-bottom: 1px solid #ece5da;
+    margin-bottom: 10px; letter-spacing: 1.5px;
+  }
+  .sop-card {
+    border: 1px solid #ece5da; margin-bottom: 6px; background: #faf7f2;
+    overflow: hidden; transition: all 0.2s;
+  }
+  .sop-card:hover { border-color: #d4a76a; }
+  .sop-card-header {
+    display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+    cursor: pointer; user-select: none; position: relative;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .sop-card-header:hover { background: rgba(212,167,106,0.04); }
+  .sop-card-header .sop-arrow {
+    font-size: 0.65rem; color: #d4a76a; transition: transform 0.2s; flex-shrink: 0;
+  }
+  .sop-card-header.open .sop-arrow { transform: rotate(90deg); }
+  .sop-card-header .sop-number {
+    font-size: 0.72rem; font-weight: 700; color: #8b6914;
+    min-width: 52px; flex-shrink: 0;
+  }
+  .sop-card-header .sop-name {
+    flex: 1; font-size: 0.78rem; font-weight: 600; color: #2c2416;
+  }
+  .sop-meta { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .sop-tag {
+    display: inline-block; padding: 1px 6px; border-radius: 2px;
+    font-size: 0.6rem; font-weight: 500; white-space: nowrap;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .sop-tag-status { background: #eaf0e8; color: #5a7a5a; }
+  .sop-tag-trigger { background: #f0ece0; color: #8a7a4a; }
+  .sop-tag-time { background: #e8eef0; color: #5a7a7a; }
+  .sop-tag-later { background: #f0e4e4; color: #a0403a; }
+  .sop-card-body {
+    display: none; padding: 0 16px 14px; border-top: 1px solid #ece5da;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .sop-card-body.open { display: block; }
+  .sop-body-section { margin-top: 10px; }
+  .sop-body-section .sop-label {
+    font-size: 0.68rem; font-weight: 700; color: #8b6914;
+    letter-spacing: 1px; margin-bottom: 3px;
+  }
+  .sop-body-section p {
+    font-size: 0.76rem; color: #3a2a1a; line-height: 1.6; margin: 0;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .sop-body-section ul, .sop-body-section ol {
+    font-size: 0.76rem; color: #3a2a1a; line-height: 1.65;
+    margin: 2px 0 0 18px; font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .sop-body-section li { margin-bottom: 2px; line-height: 1.65; font-size: 0.76rem; }
+  .sop-check-item { list-style: none; margin-left: 0 !important; padding-left: 0 !important; }
+  .sop-check-item li { list-style: none; margin-left: 0; padding-left: 0; }
+  .sop-check-item label {
+    display: inline-flex; align-items: flex-start; gap: 6px; cursor: pointer;
+    padding: 1px 0;
+  }
+  .sop-check-item input[type="checkbox"] {
+    margin-top: 4px; flex-shrink: 0; accent-color: #8b6914;
+    width: 14px; height: 14px; cursor: pointer;
+  }
+  .sop-check-item input[type="checkbox"]:checked + span { color: #a09888; text-decoration: line-through; }
+  .sop-reset-btn {
+    display: inline-block; margin-top: 8px; padding: 2px 10px;
+    font-size: 0.65rem; font-family: -apple-system, "PingFang SC", sans-serif;
+    color: #a09888; background: none; border: 1px solid #e0d8cc;
+    cursor: pointer; border-radius: 2px; transition: all 0.2s;
+  }
+  .sop-reset-btn:hover { color: #b85450; border-color: #b85450; }
+  .sop-framework-note {
+    font-size: 0.72rem; color: #a09888; font-style: italic;
+    padding: 6px 12px; background: #faf7f2; border: 1px dashed #e0d8cc;
+    margin: 6px 0;
+  }
+
   /* ===== Print ===== */
   @media print {
     .sidebar { display: none; }
@@ -349,6 +446,10 @@
     .week-dates { min-width: auto; }
     .legend { gap: 4px; padding: 8px 10px; }
     .criteria-grid { grid-template-columns: 1fr; }
+    .sop-card-header { flex-wrap: wrap; gap: 4px; padding: 10px 12px; }
+    .sop-card-header .sop-number { min-width: auto; }
+    .sop-card-header .sop-name { width: calc(100% - 30px); }
+    .sop-meta { width: 100%; }
   }
 </style>
 </head>
@@ -382,6 +483,8 @@
     <div class="sidebar-section">决策与检查</div>
     <a href="#sec12">十一、关键决策门</a>
     <a href="#sec13">十二、待确认信息</a>
+    <div class="sidebar-section">SOP工作台</div>
+    <a href="#sop">十三、工作SOP工作台</a>
   </div>
   <div class="sidebar-footer">计划 · 2026</div>
 </nav>
@@ -1395,6 +1498,18 @@
       </ul>
     </section>
 
+    <!-- ================================================================ -->
+    <!-- 十四：工作SOP工作台                                                -->
+    <!-- ================================================================ -->
+    <section id="sop">
+      <h2 class="section-title"><span class="num">十三</span>工作SOP工作台</h2>
+      <div class="sop-intro">
+        工作计划负责确定方向和阶段目标，SOP负责规定具体执行动作。需要处理某项工作时，展开对应SOP并逐项完成。SOP会随着真实执行经验持续更新，不要求第一版覆盖所有情况。
+      </div>
+      <div class="sop-category-nav" id="sopCategoryNav"></div>
+      <div id="sopContainer"></div>
+    </section>
+
     <p style="text-align:center;margin-top:48px;font-size:0.75rem;color:#a09888;">&mdash; 计划完成 &mdash;</p>
 
   </div><!-- /container -->
@@ -1462,6 +1577,576 @@
       }
     });
   });
+})();
+
+// ============================================================
+// SOP Workbench Data & Render
+// ============================================================
+(function() {
+  const STORAGE_PREFIX = 'sop_check_';
+
+  // ----- Categories -----
+  const categories = [
+    { id: 'daily',    label: '日常工作' },
+    { id: 'customer', label: '客户开发' },
+    { id: 'demo',     label: '演示与成交' },
+    { id: 'mgmt',     label: '管理与决策' },
+    { id: 'trigger',  label: '后续触发' },
+  ];
+
+  // ----- SOP Data -----
+  // Each SOP: { id, num, name, status, schedule, time, category, sections }
+  // sections: array of { label, type: 'text'|'steps'|'checklist', content }
+  // type 'steps': content is array of strings (numbered)
+  // type 'checklist': content is array of strings (with checkbox)
+  // type 'text': content is string
+
+  const sopData = [
+
+    // ==================== A. 日常工作 ====================
+    {
+      id: 'sop-01', num: '01', name: '每日工作启动与收尾',
+      status: '立即使用', schedule: '每个普通工作日', time: '启动15min + 收尾15min',
+      category: 'daily',
+      sections: [
+        { label: '适用场景', type: 'text', content: '普通工作日。差旅、展会、工厂学习和现场演示日使用简化版本。' },
+        { label: '触发条件', type: 'text', content: '每天正式开始工作时，以及当天工作结束前。' },
+        { label: '准备材料', type: 'text', content: '当日日历；本周核心成果；任务管理表；CRM；等待回复事项；费用记录表。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '查看当天日历、行程和硬性截止时间',
+          '查看CRM中今天到期的客户下一步',
+          '查看等待供应商、客户或其他人回复的事项',
+          '确定当天唯一的核心成果',
+          '确定最多三项关键行动',
+          '先安排最需要思考、最影响业务推进的工作',
+          '将邮件、微信和行政事务集中到固定时间处理',
+          '至少保留30~60分钟缓冲时间，不把日程排满',
+          '完成第一工作块：核心成果（90~120分钟）',
+          '完成第二工作块：客户或产品推进（60~90分钟）',
+          '完成第三工作块：行政和维持性任务（45~60分钟）',
+          '更新当天发生变化的客户状态',
+          '记录当天费用并上传票据',
+          '将新文件放入正确文件夹',
+          '写下当天完成的实际结果',
+          '写下当前卡点',
+          '确定明天开始工作后的第一个动作',
+          '关闭当天已经完成或不再需要的任务',
+        ]},
+        { label: '必须输出', type: 'text', content: '今日核心成果；已完成事项；当前卡点；明日第一步。' },
+        { label: '停止条件', type: 'text', content: '完成当天记录后结束，不因任务未全部完成而无限延长工作时间。' },
+        { label: '记录位置', type: 'text', content: '01_Strategy_Plan / Daily_Log' },
+        { label: '时间要求', type: 'text', content: '每天启动和收尾分别控制在15分钟左右。' },
+        { label: '后续动作', type: 'text', content: '次日启动时首先查看前一天记录的"明日第一步"。' },
+      ]
+    },
+    {
+      id: 'sop-02', num: '02', name: '每周计划与复盘',
+      status: '立即使用', schedule: '每周一、三、五', time: '每周约2小时',
+      category: 'daily',
+      sections: [
+        { label: '适用场景', type: 'text', content: '所有普通工作周。差旅周使用简化版。' },
+        { label: '触发条件', type: 'text', content: '每周一计划、周三障碍检查、周五复盘。' },
+        { label: '准备材料', type: 'text', content: '月度目标；最近一个决策门；CRM数据；现金与费用记录；上周复盘；日历和差旅安排。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '查看当前所处的月度阶段',
+          '查看距离最近的决策门及其判断条件',
+          '查看CRM漏斗和所有到期跟进',
+          '查看当前现金余额及本周预计支出',
+          '确定本周唯一核心成果',
+          '确定三项关键行动',
+          '安排客户联系、访谈和行程',
+          '标记需要别人回复的事项',
+          '预留至少20%的缓冲时间',
+          '删除或延后与本阶段目标无关的任务',
+          '周三：检查产品线是否存在卡点',
+          '周三：检查客户开发是否存在卡点',
+          '周三：检查公司和个人落地是否存在卡点',
+          '周三：将每个卡点转化为一个具体动作',
+          '周五：复盘本周核心成果完成情况',
+          '周五：统计客户联系数、回复数、访谈数、合格机会数',
+          '周五：统计本周支出',
+          '周五：明确下周最重要的成果',
+        ]},
+        { label: '必须输出', type: 'text', content: '本周结果；本周数据；本周问题；本周决定；下周核心成果。' },
+        { label: '时间要求', type: 'text', content: '周一45分钟；周三20分钟；周五45~60分钟。' },
+        { label: '记录位置', type: 'text', content: '01_Strategy_Plan / Weekly_Review' },
+        { label: '后续动作', type: 'text', content: '将下周核心成果放入下一周任务首页。' },
+      ]
+    },
+    {
+      id: 'sop-03', num: '03', name: '文件与资料归档',
+      status: '立即使用', schedule: '文件产生时 + 每周五', time: '每日5min，周五20min',
+      category: 'daily',
+      sections: [
+        { label: '适用场景', type: 'text', content: '产生客户、产品、供应商、公司、财务、网站或展会资料时。' },
+        { label: '触发条件', type: 'text', content: '新建、收到、下载或修改重要文件后。' },
+        { label: '统一文件夹结构', type: 'text', content: '01_Strategy_Plan / 02_Product_Technical / 03_Supplier / 04_Factory_Case / 05_Customers_CRM / 06_Demo_Trial / 07_Company_Legal / 08_Finance / 09_US_Personal / 10_Rotoplas / 11_Website_Marketing / 12_SOP / 99_Archive' },
+        { label: '文件命名格式', type: 'text', content: 'YYYYMMDD_主题_对象_V01 （如 20260815_Factory_Cleaning_Case_V01）' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '判断文件属于哪个主目录',
+          '使用统一日期、主题、对象和版本号命名',
+          '保存原始文件，不直接覆盖无法恢复的重要版本',
+          '重大修改时增加版本号',
+          '将口头承诺转成书面记录',
+          '将客户资料从微信、邮件或聊天工具转入CRM或客户文件夹',
+          '技术参数优先保存供应商书面文件',
+          '每周五整理下载文件夹和桌面',
+          '过期资料移入99_Archive，不立即删除',
+          '检查重要文件是否存在备份',
+        ]},
+        { label: '记录位置', type: 'text', content: '统一项目文件夹' },
+        { label: '时间要求', type: 'text', content: '收到文件后当天归档；每周五统一清理。' },
+      ]
+    },
+    {
+      id: 'sop-04', num: '04', name: '费用与现金记录',
+      status: '立即使用', schedule: '每笔支出 + 每周检查', time: '每笔2min，每周20min',
+      category: 'daily',
+      sections: [
+        { label: '适用场景', type: 'text', content: '个人赴美支出、公司设立、差旅、客户开发、设备、顾问或其他创业费用。' },
+        { label: '触发条件', type: 'text', content: '发生付款、退款、汇款、报销或产生未来付款义务。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '记录日期',
+          '记录金额和币种',
+          '记录支出对象',
+          '记录支出用途',
+          '标记个人支出或公司支出',
+          '标记所属预算阶段',
+          '记录付款方式',
+          '上传发票、收据或转账证明',
+          '标记是否可报销或计入公司成本',
+          '每周五：检查公司和个人费用是否混用',
+          '每周五：检查是否存在缺失票据',
+          '每周五：比较本周预算和实际支出',
+          '每周五：计算未来30天确定要支付的金额',
+          '每周五：检查是否接近阶段预算上限',
+        ]},
+        { label: '大额支出规则', type: 'text', content: '未列入当前阶段预算的支出先暂停付款；单笔大额支出必须写清商业目的；样机、运输、保险和顾问服务必须取得书面报价；进入下一阶段前先通过相应决策门。' },
+        { label: '必须输出', type: 'text', content: '完整费用记录；当前阶段已支出金额；剩余预算；未来30天付款预测。' },
+        { label: '时间要求', type: 'text', content: '费用当天记录，每周五检查。' },
+        { label: '记录位置', type: 'text', content: '08_Finance' },
+      ]
+    },
+
+    // ==================== B. 客户开发 ====================
+    {
+      id: 'sop-05', num: '05', name: '目标客户搜索与录入',
+      status: '客户验证阶段', schedule: '建名单或区域路线时', time: '每家10~20min',
+      category: 'customer',
+      sections: [
+        { label: '适用场景', type: 'text', content: '建立初始目标客户名单，或准备某一区域的演示路线。' },
+        { label: '触发条件', type: 'text', content: '客户名单不足、进入新区域或准备Rotoplas跟进。' },
+        { label: '搜索渠道', type: 'text', content: '行业协会目录、Rotoplas相关企业、Google Maps、LinkedIn、企业官网、模具制造商目录、爸爸公司及供应链关系、已访谈客户推荐。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '确认公司属于目标行业（滚塑/塑料/橡胶/模具）',
+          '查看企业官网并记录主要业务',
+          '判断可能存在的清洗场景',
+          '找到生产、工程、维护、模具、运营或管理类联系人',
+          '记录联系人姓名、职位和联系方式',
+          '记录客户所在州和城市',
+          '记录客户来源',
+          '做初步适配判断：为什么该公司可能需要激光清洗',
+          '设置下一步联系日期',
+          '确保每家公司录入：名称、网站、州城市、类型、场景、联系人、职位、邮箱、电话、来源、适配度、CRM阶段、下一步、下一步日期',
+        ]},
+        { label: '停止条件', type: 'text', content: '客户不属于目标行业、找不到合理应用场景，或明显不符合当前范围。' },
+        { label: '时间要求', type: 'text', content: '每次集中搜索不超过90分钟，避免整天只收集名单。' },
+        { label: '记录位置', type: 'text', content: '05_Customers_CRM' },
+        { label: '后续动作', type: 'text', content: '进入SOP 06 客户首次联系与跟进。' },
+      ]
+    },
+    {
+      id: 'sop-06', num: '06', name: '客户首次联系与跟进',
+      status: '客户验证阶段', schedule: '新客户首次触达', time: '每家10~15min',
+      category: 'customer',
+      sections: [
+        { label: '适用场景', type: 'text', content: '联系尚未沟通过的目标客户，以及进行后续跟进。' },
+        { label: '触发条件', type: 'text', content: 'CRM中客户状态为"目标企业"或达到下一次跟进日期。' },
+        { label: '准备材料', type: 'text', content: '客户官网；联系人职位；工厂可能的清洗场景；中国工厂案例；简短视频；邮件或LinkedIn模板。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '查看公司网站，确认属于目标客户范围',
+          '确认联系人可能负责生产、维护、模具、工程或运营',
+          '写出一条与该企业相关的联系理由',
+          '不直接复制完全相同的群发内容',
+          '简单说明你是谁',
+          '说明为什么联系这家公司',
+          '提出你观察到的潜在清洗问题',
+          '简要说明已有工厂应用案例',
+          '提出一个很小的下一步请求',
+          '目标：安排一次15~20分钟沟通',
+          '不要第一次就发送产品规格、报价或要求购买',
+          '第4~5天：第一次简短跟进',
+          '第10~12天：补充案例、视频或具体问题',
+          '第20天左右：最后一次跟进',
+          '仍无回复：转为低优先级',
+          '每次联系后更新CRM、记录渠道和回复',
+        ]},
+        { label: '必须输出', type: 'text', content: '已完成触达；CRM记录；明确下一步日期。' },
+        { label: '时间要求', type: 'text', content: '首次联系后24小时内更新CRM。' },
+        { label: '记录位置', type: 'text', content: '05_Customers_CRM' },
+        { label: '后续动作', type: 'text', content: '有回复则进入SOP 07 客户访谈与资格判断。' },
+      ]
+    },
+    {
+      id: 'sop-07', num: '07', name: '客户访谈与资格判断',
+      status: '客户验证阶段', schedule: '获得客户沟通机会后', time: '访谈30min + 记录15min',
+      category: 'customer',
+      sections: [
+        { label: '适用场景', type: 'text', content: '与了解生产、模具、维护或采购流程的客户人员进行沟通。' },
+        { label: '触发条件', type: 'text', content: '客户同意进行电话、视频或现场访谈。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '查看公司官网和业务，确认联系人职位',
+          '准备与该企业相关的3~5个问题',
+          '明确访谈目标是了解流程，不是立刻推销',
+          '简单说明自己和项目，表明主要希望了解实际清洗流程',
+          '了解现状：清洗方法、频率、人数、时长、是否停机',
+          '了解影响：最不满意的是什么、一年发生多少次、尝试过什么方案',
+          '了解采购条件：谁使用、谁评估、谁批准预算、是否有计划',
+          '确认下一步：必须是明确动作（发照片、安排演示、暂停等）',
+          '访谈后15分钟内更新CRM状态',
+          '记录主要痛点、决策人、采购时间、技术适用性、风险',
+        ]},
+        { label: '必须输出', type: 'text', content: '访谈记录；客户资格结论；明确下一步；CRM状态更新。' },
+        { label: '停止条件', type: 'text', content: '没有真实痛点、激光明显不适用、无推进意愿或长期无采购可能。' },
+        { label: '时间要求', type: 'text', content: '访谈结束后15分钟内完成记录。' },
+        { label: '记录位置', type: 'text', content: '05_Customers_CRM' },
+        { label: '后续动作', type: 'text', content: '进入SOP 08 CRM更新与客户资格评分。' },
+      ]
+    },
+    {
+      id: 'sop-08', num: '08', name: 'CRM更新与客户资格评分',
+      status: '客户验证阶段', schedule: '每次客户互动后', time: '5~10min',
+      category: 'customer',
+      sections: [
+        { label: '适用场景', type: 'text', content: '客户回复、访谈、演示、试用、报价或决策发生变化后。' },
+        { label: '触发条件', type: 'text', content: '任何会改变客户状态的信息出现。' },
+        { label: 'CRM阶段', type: 'text', content: '目标企业 → 已联系 → 有回复 → 已访谈 → 合格机会 → 已演示 → 生产试用 → 已报价 → 决策中 → 成交/暂缓/失败' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '更新客户当前阶段',
+          '更新主要联系人',
+          '记录最近一次互动',
+          '记录客户痛点',
+          '记录技术适用性',
+          '记录购买参与人',
+          '记录预计采购时间',
+          '写明下一步行动和设置下一步日期',
+          '如暂缓或失败，记录原因',
+          '客户资格评分（每项0~2分）：清洗频率、人工/停机痛点、激光适用性、决策人参与、采购时间、试用意愿、地理可执行性',
+          '10分以上重点推进，7~9分继续培养，6分以下暂不安排现场演示',
+        ]},
+        { label: '失败原因分类', type: 'text', content: '没有明显痛点 · 激光不适用 · 没有预算 · 采购周期太长 · 担心安全 · 价格过高 · 需要本地售后 · 已有替代方案 · 无法安排现场测试 · 时间不合适' },
+        { label: '时间要求', type: 'text', content: '客户互动后当天完成。' },
+        { label: '记录位置', type: 'text', content: '05_Customers_CRM' },
+      ]
+    },
+
+    // ==================== C. 演示与成交 ====================
+    {
+      id: 'sop-09', num: '09', name: '现场小演示',
+      status: '触发后启用', schedule: '客户资格通过后', time: '准备7~14天，现场60~90min',
+      category: 'demo',
+      sections: [
+        { label: '适用场景', type: 'text', content: '远程沟通后确认客户有真实痛点、激光初步适用，并存在采购可能。' },
+        { label: '触发条件', type: 'text', content: '客户资格评分较高，关键人员愿意到场，并可以安排真实工件测试。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '演示前7~14天：确认日期、时间、工件、材质和污染物',
+          '确认电源、通风和烟尘处理',
+          '确认搬运方式',
+          '确认现场参与人员',
+          '确认是否允许拍摄和使用数据',
+          '签署必要文件',
+          '确定2~4项成功标准',
+          '确认演示成功后的下一步',
+          '演示当天：到场检查安全条件',
+          '拍摄清洗前状态，先测试小区域',
+          '逐步调整参数，记录参数和清洗时间',
+          '检查是否损伤表面，记录客户反馈',
+          '拍摄清洗后状态',
+          '决定是否进入生产试用',
+          '演示后24小时内更新CRM，发送简短结果总结',
+        ]},
+        { label: '停止条件', type: 'text', content: '安全条件不满足、材料不适用、存在明显损伤风险或客户关键人员缺席。' },
+        { label: '时间要求', type: 'text', content: '演示后24小时内完成总结。' },
+        { label: '记录位置', type: 'text', content: '06_Demo_Trial / Demo' },
+      ]
+    },
+    {
+      id: 'sop-10', num: '10', name: '3~5天生产试用',
+      status: '触发后启用', schedule: '现场演示成功后', time: '3~5个工作日',
+      category: 'demo',
+      sections: [
+        { label: '适用场景', type: 'text', content: '现场小演示成功，客户需要在真实生产中验证效果。' },
+        { label: '触发条件', type: 'checklist', content: [
+          '有真实生产任务',
+          '明确开始与结束时间',
+          '有指定操作人员',
+          '决策人同意参加结束复盘',
+          '已定义成功标准',
+          '已签署设备、安全、损坏和回收责任',
+          '现场符合使用要求',
+          '成功后存在采购可能',
+        ]},
+        { label: '执行步骤', type: 'checklist', content: [
+          '送达当天：检查设备状态，记录序列号，拍摄外观',
+          '完成操作和安全培训',
+          '确认允许和禁止使用的工件与材料',
+          '建立每日使用记录，确认回收时间和结束复盘会议',
+          '试用期间每日简短确认，处理技术问题',
+          '记录参数和反馈，不随意扩大试用范围',
+          '到期当天检查设备，汇总试用数据',
+          '与操作人员复盘，与决策人开购买复盘会',
+          '客户选择：保留购买、订购新机或归还',
+          '不购买则按计划回收，不允许无限延长滞留',
+        ]},
+        { label: '必须输出', type: 'text', content: '每日使用记录；试用结果；设备回收或转购买记录；客户决定和下一步日期。' },
+        { label: '停止条件', type: 'text', content: '出现安全问题、异常使用、设备损坏风险或超出协议范围。' },
+        { label: '记录位置', type: 'text', content: '06_Demo_Trial / Production_Trial' },
+        { label: '后续动作', type: 'text', content: '进入SOP 11 试用转购买。' },
+      ]
+    },
+    {
+      id: 'sop-11', num: '11', name: '试用转购买',
+      status: '触发后启用', schedule: '生产试用结束后', time: '复盘30~60min + 14天跟进',
+      category: 'demo',
+      sections: [
+        { label: '适用场景', type: 'text', content: '现场演示或生产试用完成后，推动客户作出购买或不购买决定。' },
+        { label: '准备材料', type: 'text', content: '试用前成功标准；试用数据；前后对比；客户反馈；初步报价；付款与交付方案。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '是否达到预定清洗效果',
+          '节省多少时间和人工',
+          '是否减少停机',
+          '是否有表面损伤',
+          '操作是否容易学习',
+          '是否存在烟尘或现场问题',
+          '还有什么技术和安全顾虑',
+          '谁最终批准采购，预计决定日期',
+          '客户选择：购买试用机 / 订购新机 / 暂不购买',
+          '24小时内发送试用总结和报价',
+          '2~3天后确认客户内部反馈',
+          '7天后解决剩余问题',
+          '14天后确认购买、暂缓或失败',
+        ]},
+        { label: '必须输出', type: 'text', content: '试用结果报告；正式下一步；报价或停止结论；CRM状态。' },
+        { label: '停止条件', type: 'text', content: '客户明确不购买、长期无预算、内部项目取消或超过合理决策时间。' },
+        { label: '记录位置', type: 'text', content: '06_Demo_Trial / Conversion' },
+        { label: '后续动作', type: 'text', content: '购买则进入正式报价与订单SOP；不购买则记录原因并回收设备。' },
+      ]
+    },
+
+    // ==================== D. 管理与决策 ====================
+    {
+      id: 'sop-12', num: '12', name: '阶段决策门复盘',
+      status: '立即使用', schedule: '每个阶段决策门', time: '60~90min',
+      category: 'mgmt',
+      sections: [
+        { label: '适用场景', type: 'text', content: '8月17日、9月4日、10月17日、Rotoplas结束后和12月底等关键节点。' },
+        { label: '触发条件', type: 'text', content: '到达计划中的决策日期，或准备进入下一阶段投入。' },
+        { label: '准备材料', type: 'text', content: '原阶段目标；实际数据；CRM；财务记录；风险清单；供应商信息；下一阶段预算。' },
+        { label: '执行步骤', type: 'checklist', content: [
+          '写出本阶段原目标',
+          '写出实际完成结果',
+          '汇总客户、产品、资金和时间数据',
+          '汇总本阶段支出',
+          '写出新的发现',
+          '写出最大的三个风险',
+          '写出仍未验证的假设',
+          '计算继续需要投入的资金',
+          '写出下一阶段预期结果',
+          '做出明确决定：继续 / 调整 / 暂停',
+          '不能只写"再看看"',
+        ]},
+        { label: '必须输出', type: 'text', content: '一页《阶段决策记录》，包括决定、原因、投入和下一次决定日期。' },
+        { label: '停止条件', type: 'text', content: '已形成明确决定、下一阶段范围和预算。' },
+        { label: '记录位置', type: 'text', content: '01_Strategy_Plan / Decision_Gates' },
+        { label: '时间要求', type: 'text', content: '进入下一阶段或支付大额费用前完成。' },
+        { label: '后续动作', type: 'text', content: '将决定同步到时间线、资金计划和本周任务中。' },
+      ]
+    },
+
+    // ==================== E. 后续触发 ====================
+    {
+      id: 'sop-13', num: '13', name: '正式报价与订单',
+      status: '触发后启用', schedule: '客户决定购买后', time: '待完善',
+      category: 'trigger',
+      framework: true,
+      sections: [
+        { label: '框架内容', type: 'text', content: '报价前资格确认；成本和毛利检查；设备配置；报价有效期；订金比例；付款节点；交付日期；验收标准；保修；责任限制；客户批准；CRM与财务记录。' },
+      ]
+    },
+    {
+      id: 'sop-14', num: '14', name: '设备进口与清关',
+      status: '触发后启用', schedule: '设备运往美国前', time: '待完善',
+      category: 'trigger',
+      framework: true,
+      sections: [
+        { label: '框架内容', type: 'text', content: '产品合规确认；型号和序列号；FDA相关资料；HS编码；报关行；Importer of Record；运输保险；包装；关税和费用；清关；最后一公里；到货检查。' },
+      ]
+    },
+    {
+      id: 'sop-15', num: '15', name: '设备交付与培训',
+      status: '触发后启用', schedule: '设备到达客户后', time: '待完善',
+      category: 'trigger',
+      framework: true,
+      sections: [
+        { label: '框架内容', type: 'text', content: '交付条件；现场条件；设备检查；安装；安全培训；操作培训；签收；验收；客户联系人；售后入口。' },
+      ]
+    },
+    {
+      id: 'sop-16', num: '16', name: '售后故障处理',
+      status: '触发后启用', schedule: '客户报障时', time: '待完善',
+      category: 'trigger',
+      framework: true,
+      sections: [
+        { label: '框架内容', type: 'text', content: '客户报障；安全停机；故障分级；远程诊断；日志和视频；模块更换；现场维修；备用机；保修判断；关闭工单；故障复盘。' },
+      ]
+    },
+    {
+      id: 'sop-17', num: '17', name: 'Rotoplas参会与跟进',
+      status: '触发后启用', schedule: '11月17~19日', time: '待完善',
+      category: 'trigger',
+      framework: true,
+      sections: [
+        { label: '框架内容', type: 'text', content: '参会目标；目标企业名单；提前预约；现场记录；非参展商行为边界；联系人录入；72小时内跟进；安排后续访谈或试用；行业观察报告。' },
+      ]
+    },
+  ];
+
+  // ----- Render -----
+  function render() {
+    const navEl = document.getElementById('sopCategoryNav');
+    const container = document.getElementById('sopContainer');
+    if (!container) return;
+
+    // Category nav
+    navEl.innerHTML = categories.map(c =>
+      `<a href="#sop-cat-${c.id}">${c.label}</a>`
+    ).join('');
+
+    // Cards by category
+    container.innerHTML = categories.map(cat => {
+      const items = sopData.filter(s => s.category === cat.id);
+      return `
+        <div class="sop-category" id="sop-cat-${cat.id}">
+          <div class="sop-category-title">${cat.label}</div>
+          ${items.map(sop => renderCard(sop)).join('')}
+        </div>
+      `;
+    }).join('');
+
+    // Restore checkboxes from localStorage
+    restoreCheckboxes();
+
+    // Accordion: open SOP 01 by default
+    const firstCard = document.querySelector('#sopContainer .sop-card');
+    if (firstCard) toggleCard(firstCard, true);
+  }
+
+  function renderCard(sop) {
+    const statusClass = sop.status === '触发后启用' ? 'sop-tag-later' : 'sop-tag-status';
+    const bodyId = 'body-' + sop.id;
+
+    let bodyHTML = '';
+    if (sop.framework) {
+      bodyHTML = `<div class="sop-framework-note">此SOP将在真实业务触发后，根据律师、CPA、报关行、保险、设备参数和实际订单进一步完善。</div>`;
+    }
+
+    sop.sections.forEach(sec => {
+      if (sec.type === 'text') {
+        bodyHTML += `<div class="sop-body-section"><div class="sop-label">${sec.label}</div><p>${sec.content}</p></div>`;
+      } else if (sec.type === 'checklist') {
+        bodyHTML += `<div class="sop-body-section"><div class="sop-label">${sec.label}</div>`;
+        bodyHTML += `<ul class="sop-check-item" data-sop-id="${sop.id}">`;
+        sec.content.forEach((item, idx) => {
+          const ckId = `${sop.id}_${idx}`;
+          bodyHTML += `<li><label><input type="checkbox" id="${ckId}" data-sop-id="${sop.id}" data-idx="${idx}"><span>${idx+1}. ${item}</span></label></li>`;
+        });
+        bodyHTML += `</ul></div>`;
+      }
+    });
+
+    // Reset button
+    bodyHTML += `<button class="sop-reset-btn" data-sop-id="${sop.id}">重置本SOP</button>`;
+
+    return `
+      <div class="sop-card" id="${sop.id}">
+        <div class="sop-card-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleSOP('${sop.id}')" onkeydown="if(event.key==='Enter'||event.key===' ')event.preventDefault();toggleSOP('${sop.id}')">
+          <span class="sop-arrow">▶</span>
+          <span class="sop-number">SOP ${sop.num}</span>
+          <span class="sop-name">${sop.name}</span>
+          <span class="sop-meta">
+            <span class="sop-tag ${statusClass}">${sop.status}</span>
+            <span class="sop-tag sop-tag-trigger">${sop.schedule}</span>
+            <span class="sop-tag sop-tag-time">${sop.time}</span>
+          </span>
+        </div>
+        <div class="sop-card-body" id="${bodyId}">
+          ${bodyHTML}
+        </div>
+      </div>
+    `;
+  }
+
+  // ----- Accordion -----
+  window.toggleSOP = function(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    const header = card.querySelector('.sop-card-header');
+    const body = card.querySelector('.sop-card-body');
+    if (!header || !body) return;
+    toggleCard(card);
+  };
+
+  function toggleCard(card, forceOpen) {
+    const header = card.querySelector('.sop-card-header');
+    const body = card.querySelector('.sop-card-body');
+    const isOpen = body.classList.contains('open');
+
+    if (forceOpen === true && !isOpen) {
+      header.classList.add('open');
+      body.classList.add('open');
+      header.setAttribute('aria-expanded', 'true');
+    } else if (forceOpen !== true) {
+      header.classList.toggle('open');
+      body.classList.toggle('open');
+      header.setAttribute('aria-expanded', !isOpen);
+    }
+  }
+
+  // ----- Checkboxes & localStorage -----
+  function restoreCheckboxes() {
+    const cbs = document.querySelectorAll('.sop-check-item input[type="checkbox"]');
+    cbs.forEach(cb => {
+      const key = STORAGE_PREFIX + cb.id;
+      if (localStorage.getItem(key) === 'checked') {
+        cb.checked = true;
+      }
+      cb.addEventListener('change', function() {
+        if (this.checked) {
+          localStorage.setItem(STORAGE_PREFIX + this.id, 'checked');
+        } else {
+          localStorage.removeItem(STORAGE_PREFIX + this.id);
+        }
+      });
+    });
+
+    // Reset buttons
+    document.querySelectorAll('.sop-reset-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const sopId = this.getAttribute('data-sop-id');
+        const cbs = document.querySelectorAll(`.sop-check-item input[data-sop-id="${sopId}"]`);
+        cbs.forEach(cb => {
+          cb.checked = false;
+          localStorage.removeItem(STORAGE_PREFIX + cb.id);
+        });
+      });
+    });
+  }
+
+  // Run render when DOM is ready
+  if (document.getElementById('sopContainer')) {
+    render();
+  }
 })();
 </script>
 
