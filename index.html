@@ -47,17 +47,17 @@
     font-size: 0.55rem; color: #c8c0b0; font-family: -apple-system, "PingFang SC", sans-serif;
     letter-spacing: 1px;
   }
+  .sidebar-section {
+    font-size: 0.6rem; color: #a09888; padding: 10px 20px 3px;
+    letter-spacing: 2px; font-family: -apple-system, "PingFang SC", sans-serif;
+    border-top: 1px solid #e8e0d5; margin-top: 4px;
+  }
 
   /* Menu toggle (hidden on desktop) */
   .menu-toggle {
     display: none; background: none; border: none; cursor: pointer;
     font-size: 1.4rem; color: #8b6914; padding: 4px 8px; line-height: 1;
     font-family: -apple-system, "PingFang SC", sans-serif;
-  }
-  .sidebar-section {
-    font-size: 0.6rem; color: #a09888; padding: 10px 20px 3px;
-    letter-spacing: 2px; font-family: -apple-system, "PingFang SC", sans-serif;
-    border-top: 1px solid #e8e0d5; margin-top: 4px;
   }
 
   /* ===== Main ===== */
@@ -245,13 +245,79 @@
   .tl-title { font-weight: 600; color: #2c2416; font-size: 0.82rem; }
   .tl-desc { font-size: 0.76rem; color: #7a6a5a; font-family: -apple-system, "PingFang SC", sans-serif; }
 
+  /* ===== New: Tier Cards (三档目标) ===== */
+  .tier-grid { display: grid; gap: 12px; margin: 14px 0; }
+  .tier-card {
+    background: #faf7f2; border: 1px solid #e8e0d5; padding: 14px 18px;
+    border-left: 3px solid #d4a76a; transition: all 0.2s;
+  }
+  .tier-card:hover { background: #f5f0e8; }
+  .tier-card.low { border-left-color: #a09888; }
+  .tier-card.base { border-left-color: #8b6914; }
+  .tier-card.ambitious { border-left-color: #b85450; }
+  .tier-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 4px; letter-spacing: 0.5px; }
+  .tier-card.low h4 { color: #7a6a5a; }
+  .tier-card.base h4 { color: #8b6914; }
+  .tier-card.ambitious h4 { color: #b85450; }
+  .tier-card ul { font-size: 0.8rem; font-family: -apple-system, "PingFang SC", sans-serif; margin: 2px 0 0 16px; }
+  .tier-card li { line-height: 1.6; }
+
+  /* ===== New: Sales Funnel ===== */
+  .funnel { display: flex; flex-direction: column; gap: 2px; margin: 12px 0; }
+  .funnel-step {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 14px; background: #faf7f2; border: 1px solid #ece5da;
+    font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .funnel-step .step-icon {
+    width: 20px; height: 20px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; color: #fff; font-weight: 700; flex-shrink: 0;
+  }
+  .funnel-step .step-label { flex: 1; color: #3a2a1a; font-weight: 500; }
+  .funnel-step .step-note { font-size: 0.7rem; color: #a09888; }
+  .funnel-step.active { background: #f0ebe2; border-color: #d4a76a; }
+
+  /* ===== New: Customer Stage Card ===== */
+  .stage-card {
+    background: #faf7f2; border: 1px solid #e8e0d5; padding: 12px 16px; margin: 8px 0;
+    border-left: 2px solid #d4a76a;
+  }
+  .stage-card h4 { color: #2c2416; font-size: 0.85rem; margin-bottom: 3px; letter-spacing: 0.3px; }
+  .stage-card p { font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #5a4a3a; line-height: 1.55; margin: 0; }
+  .stage-card ul { font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif; margin: 2px 0 0 16px; }
+  .stage-card li { line-height: 1.6; margin-bottom: 1px; }
+
+  /* ===== New: Supplier Risk Card ===== */
+  .risk-card {
+    background: #faf5f2; border: 1px solid #e0d0c8; border-top: 2px solid #b85450;
+    padding: 14px 18px; margin: 12px 0;
+  }
+  .risk-card p { font-size: 0.82rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #5a4a3a; line-height: 1.6; margin: 0; }
+  .risk-card strong { color: #b85450; }
+
+  /* ===== New: Criteria Grid ===== */
+  .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 10px 0; }
+  .criteria-item {
+    background: #faf7f2; border: 1px solid #ece5da; padding: 8px 12px;
+    font-size: 0.76rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #3a2a1a;
+  }
+
+  /* ===== Card for 标杆客户 ===== */
+  .ref-card {
+    background: #faf7f2; border: 1px solid #e8e0d5; padding: 12px 16px; margin: 8px 0;
+    border-left: 2px solid #d4a76a; display: flex; flex-direction: column; gap: 6px;
+  }
+  .ref-card h4 { color: #2c2416; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
+  .ref-card p { font-size: 0.78rem; font-family: -apple-system, "PingFang SC", sans-serif; color: #5a4a3a; line-height: 1.55; margin: 0; }
+
   /* ===== Print ===== */
   @media print {
     .sidebar { display: none; }
     .main { margin-left: 0; }
     .hero { padding: 24px 20px; }
     .container { padding: 20px; max-width: 100%; }
-    .week-card, .gate-card, .goal-card, .fund-card { break-inside: avoid; }
+    .week-card, .gate-card, .goal-card, .fund-card, .tier-card, .stage-card { break-inside: avoid; }
   }
 
   /* ===== Mobile ===== */
@@ -282,6 +348,7 @@
     .week-card { flex-direction: column; gap: 4px; }
     .week-dates { min-width: auto; }
     .legend { gap: 4px; padding: 8px 10px; }
+    .criteria-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -297,23 +364,24 @@
     <button class="menu-toggle" id="menuToggle" aria-label="切换导航">≡</button>
   </div>
   <div class="sidebar-nav" id="nav">
-    <div class="sidebar-section">核心视图</div>
-    <a href="#calendar" class="active">周历 · 执行时间线</a>
-    <a href="#gates">关键决策门</a>
+    <div class="sidebar-section">执行时间线</div>
+    <a href="#calendar" class="active">四、2026年执行时间线</a>
     <div class="sidebar-section">战略参考</div>
     <a href="#sec1">一、创业总体定位</a>
     <a href="#sec2">二、执行原则</a>
     <a href="#sec3">三、长期目标</a>
-    <div class="sidebar-section">运营参考</div>
-    <a href="#sec5">五、产品与客户</a>
-    <a href="#sec6">六、专业顾问</a>
-    <a href="#sec7">七、招聘计划</a>
-    <a href="#sec8">八、资金计划</a>
-    <a href="#sec9">九、售后保修</a>
-    <a href="#sec10">十、每周节奏</a>
-    <div class="sidebar-section">检查清单</div>
-    <a href="#sec12">待弄清楚的信息</a>
-    <a href="#sec13">执行标准</a>
+    <div class="sidebar-section">销售与产品</div>
+    <a href="#sec5">五、产品、客户与销售</a>
+    <a href="#sec6">六、公司、身份与顾问</a>
+    <a href="#sec7">七、供应商、进口与合规</a>
+    <div class="sidebar-section">运营与资金</div>
+    <a href="#sec8">八、招聘计划</a>
+    <a href="#sec9">九、资金计划</a>
+    <a href="#sec10">十、售后与保修</a>
+    <a href="#sec11">十一、每周节奏</a>
+    <div class="sidebar-section">决策与检查</div>
+    <a href="#sec12">十二、关键决策门</a>
+    <a href="#sec13">十三、待确认信息</a>
   </div>
   <div class="sidebar-footer">计划 · 2026</div>
 </nav>
@@ -331,10 +399,10 @@
   <div class="container">
 
     <!-- ================================================================ -->
-    <!-- 周历                                                             -->
+    <!-- 四：2026年执行时间线（周历）                                         -->
     <!-- ================================================================ -->
     <section id="calendar">
-      <h2 class="section-title"><span class="num">&#9670;</span>周历 · 执行时间线</h2>
+      <h2 class="section-title"><span class="num">&#9670;</span>四、2026年执行时间线</h2>
       <p class="tab-intro">从7月到12月，每一周的核心任务。色标帮助区分不同类型的工作。</p>
 
       <div class="legend">
@@ -447,16 +515,32 @@
         </div>
 
         <div class="week-card">
-          <div class="week-dates">8/18 — 8/24</div>
+          <div class="week-dates">8/18 — 8/20</div>
           <div class="week-content">
-            <div class="week-title">建立最小经营系统</div>
+            <div class="week-title">案例整理</div>
             <ul class="week-tasks">
-              <li>英文案例报告 V1</li>
+              <li>清理和核对测试数据</li>
+              <li>选择照片与视频</li>
+              <li>写出案例结构</li>
+              <li>提炼最有说服力的三个结论</li>
+              <li>完成英文案例报告V1</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-product">产品·技术</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-dates">8/21 — 8/24</div>
+          <div class="week-content">
+            <div class="week-title">最小销售系统</div>
+            <ul class="week-tasks">
               <li>一页英文销售介绍</li>
-              <li>简单公司网站 V1</li>
-              <li>客户访谈脚本</li>
-              <li>筛选30~50家潜在客户，建立简单CRM</li>
-              <li>初步成本与报价表</li>
+              <li>简单公司网站V1</li>
+              <li>客户访谈问题</li>
+              <li>筛选20~30家高质量目标企业，建立简单CRM</li>
+              <li>建立成本变量框架（采购价、运输、关税、报关、保险、演示、备件、保修、销售和差旅）</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-company">公司·法务</span>
@@ -492,6 +576,7 @@
               <li>准备加拿大护照、境外地址证明、银行账单</li>
               <li>整理美国期间生活预算、第一批客户访谈名单</li>
               <li>整理身份、税务、进口问题清单（暂不找顾问）</li>
+              <li>目标企业名单扩展至30~50家</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-company">公司·法务</span>
@@ -533,7 +618,7 @@
           <div class="week-content">
             <div class="week-title">客户验证 &amp; 公司落地（一）</div>
             <ul class="week-tasks">
-              <li>联系10~20家目标客户，完成3~6次有效访谈</li>
+              <li>联系25~40家目标客户，获得10~20家明确回复，完成3~6次有效访谈</li>
               <li>确认客户清洗方式、频率、痛点、预算</li>
               <li>根据客户分布确定注册州</li>
               <li>注册公司、申请EIN</li>
@@ -550,9 +635,10 @@
           <div class="week-content">
             <div class="week-title">客户验证 &amp; 公司落地（二）</div>
             <ul class="week-tasks">
-              <li>持续客户访谈，优化销售表达</li>
+              <li>持续客户访谈，优化销售表达，完成6~10次有效访谈</li>
               <li>准备公司银行账户</li>
               <li>建立基础会计记录</li>
+              <li>更新CRM客户阶段</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-customer">客户·市场</span>
@@ -566,8 +652,8 @@
           <div class="week-content">
             <div class="week-title">客户验证（月末冲刺）</div>
             <ul class="week-tasks">
-              <li>完成月度目标：累计15~25次有效客户联系</li>
-              <li>整理9月验证结果</li>
+              <li>完成月度目标：累计10~15次有效客户访谈</li>
+              <li>整理9月验证结果，识别3~5个合格客户机会</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-customer">客户·市场</span>
@@ -603,10 +689,10 @@
         <div class="week-card gate">
           <div class="week-dates">10/11 — 10/17</div>
           <div class="week-content">
-            <div class="week-title">阶段复盘 <span class="gate-badge">&#9670; 决策门三</span></div>
+            <div class="week-title">市场验证复盘 <span class="gate-badge">&#9670; 决策门三</span></div>
             <ul class="week-tasks">
               <li>形成《美国市场验证报告》</li>
-              <li>评估：15+有效访谈？3+合格机会？2+愿意试洗的客户？</li>
+              <li>评估：10~15次有效客户访谈？3个合格机会？2家愿意现场演示或生产试用？</li>
               <li>判断：继续、调整还是暂停？</li>
             </ul>
             <div class="week-tags">
@@ -624,7 +710,8 @@
               <li>联系E-2移民律师（身份、工作边界）</li>
               <li>联系跨境CPA（税务、记账、资金路径）</li>
               <li>准备Rotoplas资料：一页介绍、案例报告、清洗视频</li>
-              <li>提前联系10~20家目标滚塑企业</li>
+              <li>提前联系10~20家目标滚塑企业，争取预约5~10次正式交流</li>
+              <li>安排区域演示路线</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-company">公司·法务</span>
@@ -645,12 +732,12 @@
         <div class="week-card">
           <div class="week-dates">11/1 — 11/15</div>
           <div class="week-content">
-            <div class="week-title">Rotoplas最后准备</div>
+            <div class="week-title">Rotoplas最后准备 &amp; 客户跟进</div>
             <ul class="week-tasks">
               <li>完善英文公司介绍和解决方案</li>
               <li>制作电子名片</li>
               <li>确定重点企业名单和访谈问题</li>
-              <li>争取预约5~10次展会简短交流</li>
+              <li>确认展会预约交流时间</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-customer">客户·市场</span>
@@ -660,7 +747,21 @@
         </div>
 
         <div class="week-card gate">
-          <div class="week-dates">11/16 — 11/19</div>
+          <div class="week-dates">11/16 — 11/16</div>
+          <div class="week-content">
+            <div class="week-title">Rotoplas抵达准备</div>
+            <ul class="week-tasks">
+              <li>根据航班和提前预约情况决定是否提前抵达</li>
+              <li>不作为普通参会者的主要活动日</li>
+            </ul>
+            <div class="week-tags">
+              <span class="tag tag-customer">客户·市场</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card gate">
+          <div class="week-dates">11/17 — 11/19</div>
           <div class="week-content">
             <div class="week-title">Rotoplas 2026 · 新奥尔良 <span class="gate-badge">&#9670; 决策门四</span></div>
             <ul class="week-tasks">
@@ -668,7 +769,8 @@
               <li>与5家以上潜在客户建立后续联系</li>
               <li>确认滚塑行业采购决策流程</li>
               <li>了解模具清洗方法、频率、成本</li>
-              <li>展会后72小时内完成跟进</li>
+              <li>记录相关小型测试或辅助设备需求</li>
+              <li>展会后72小时内完成跟进，更新CRM</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-customer">客户·市场</span>
@@ -680,17 +782,18 @@
         <div class="week-card">
           <div class="week-dates">11/20 — 11/30</div>
           <div class="week-content">
-            <div class="week-title">首单推进</div>
+            <div class="week-title">展后跟进 &amp; 首单推进</div>
             <ul class="week-tasks">
+              <li>跟进重点联系人，安排电话、演示或生产试用</li>
+              <li>完成Rotoplas行业观察报告</li>
               <li>确认产品进口合规路径</li>
               <li>联系合规顾问、报关行、保险经纪</li>
-              <li>核算关税、运输和保险成本</li>
               <li>完成演示或销售合同模板</li>
             </ul>
             <div class="week-tags">
               <span class="tag tag-company">公司·法务</span>
               <span class="tag tag-finance">资金·财务</span>
-              <span class="tag tag-product">产品·技术</span>
+              <span class="tag tag-customer">客户·市场</span>
             </div>
           </div>
         </div>
@@ -724,60 +827,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ================================================================ -->
-    <!-- 关键决策门                                                         -->
-    <!-- ================================================================ -->
-    <section id="gates">
-      <h2 class="section-title"><span class="num">&#9670;</span>关键决策门</h2>
-      <p class="tab-intro">全年五个决策门，每个结论决定是否继续、调整方向或暂停投入。</p>
-
-      <div class="gate-grid">
-        <div class="gate-card">
-          <div class="g-label">决策门一</div>
-          <div class="g-date">8月17日</div>
-          <div class="g-title">设备是否有效、稳定且基本安全？</div>
-          <div class="g-desc">清洗效果是否稳定？是否会明显损伤目标模具？是否可以形成可信案例？供应商是否愿意长期支持？基础售后是否可行？</div>
-        </div>
-
-        <div class="gate-card">
-          <div class="g-label">决策门二</div>
-          <div class="g-date">9月4日</div>
-          <div class="g-title">赴美基础准备是否完成？</div>
-          <div class="g-desc">产品学习 + 工厂案例 + 网站和介绍材料 + 客户名单 + 赴美文件。此时不要求解决全部法律和税务问题。</div>
-        </div>
-
-        <div class="gate-card">
-          <div class="g-label">决策门三</div>
-          <div class="g-date">10月17日</div>
-          <div class="g-title">美国市场验证是否通过？</div>
-          <div class="g-desc">至少15次有效客户访谈、3个合格机会、2个愿意进一步试洗或评估的客户、清晰的客户痛点、购买参与人、初步价格反馈。未通过则调整策略，而非继续扩大投入。</div>
-        </div>
-
-        <div class="gate-card">
-          <div class="g-label">决策门四</div>
-          <div class="g-date">Rotoplas结束后</div>
-          <div class="g-title">滚塑行业是否值得作为2027年重点？</div>
-          <div class="g-desc">客户是否普遍认可清洗问题？是否愿意进一步试用？主要采购障碍是什么？是否值得2027年正式参展？</div>
-        </div>
-
-        <div class="gate-card">
-          <div class="g-label">决策门五</div>
-          <div class="g-date">2026年12月底</div>
-          <div class="g-title">2026年是否已证明业务可行？</div>
-          <div class="g-desc">客户愿意付钱 + 产品可合法进口和交付 + 单台毛利基本成立 + 售后责任可承担 + 市场不只依赖单一关系 + 业务有继续复制的可能。通过则2027年扩大投资、增加产品和招聘。</div>
-        </div>
-      </div>
-
-      <div class="sub-title" style="margin-top:28px;">投入顺序</div>
-      <blockquote>证明设备有效 → 做出可信案例 → 证明目标客户有问题 → 证明客户愿意试用或进一步了解 → 确认进口与安全可行 → 证明客户愿意付钱 → 证明毛利和售后可承担 → 扩大销售、产品和团队</blockquote>
-
-      <div class="sub-title">2026年成功标准</div>
-      <blockquote class="principle-block">
-        <strong>最低标准：</strong>知道目标客户是谁、问题是否真实、设备是否有效、客户是否愿意继续试用或付钱，以及这项业务是否值得在2027年扩大。<br><br>
-        <strong>理想成果：</strong>在完成上述验证的基础上，获得首批付费订单，并建立可以继续执行的公司、进口、销售和售后路径。
-      </blockquote>
     </section>
 
     <!-- ================================================================ -->
@@ -847,7 +896,7 @@
 
       <div class="goal-card">
         <h4>2026年：完成基础搭建与首轮验证</h4>
-        <p><strong>产品与客户：</strong>掌握设备操作，完成1个真实工厂案例，15~25次有效客户访谈，3~8个试洗/演示机会，1~3个付费订单。</p>
+        <p><strong>产品与客户：</strong>掌握设备操作，完成1个真实工厂案例，10~15次有效客户访谈，3~5个合格客户机会，2~3家愿意现场演示或生产试用。</p>
         <p><strong>公司：</strong>成立100%持有的美国公司，取得EIN，建立公司和个人银行账户，建立会计记录，明确进口销售路径，完成E-2可行性评估。</p>
         <p><strong>财务：</strong>不以盈利为标准，算清售价、单台落地成本、毛利、试洗成本、获客成本、销售周期、保修成本、盈亏平衡销量。</p>
       </div>
@@ -872,27 +921,198 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- 五：产品与客户                                                     -->
+    <!-- 五：产品、客户与销售路径                                            -->
     <!-- ================================================================ -->
     <section id="sec5">
-      <h2 class="section-title"><span class="num">五</span>产品与客户发展计划</h2>
+      <h2 class="section-title"><span class="num">五</span>产品、客户与销售路径</h2>
 
-      <div class="sub-title">1. 2026年客户范围</div>
-      <p>只验证：滚塑生产企业、塑料加工企业、橡胶加工企业、模具制造/维修/使用企业。不设探索组，不主动分散到其他行业。选择标准：清洗痛点明显、频率较高、停机成本高、易理解激光清洗价值。</p>
+      <div class="sub-title">1. 2026年目标客户</div>
+      <p>只集中验证以下四类企业：滚塑生产企业；塑料加工企业；橡胶加工企业；模具制造、维修和使用企业。</p>
+      <p>2026年不设其他行业探索组，不主动分散到船舶、焊接、普通除锈、文物修复等其他激光清洗场景。</p>
 
-      <div class="sub-title">2. 小型测试和辅助设备</div>
+      <div class="sub-title">2. 目标客户筛选标准</div>
+      <p>优先选择符合以下条件的企业：</p>
+      <ul>
+        <li>模具或设备需要反复清洗</li>
+        <li>当前清洗耗时、费人工或需要停机</li>
+        <li>模具价值较高，担心传统清洗损伤</li>
+        <li>清洗频率较高</li>
+        <li>激光清洗初步适用</li>
+        <li>愿意安排生产、设备或管理人员沟通</li>
+        <li>测试成功后存在采购可能</li>
+        <li>位于可形成集中演示路线的区域</li>
+      </ul>
+
+      <div class="sub-title">3. 客户漏斗与定义</div>
+      <p>截至2026年10月17日的建议目标：</p>
+      <ul>
+        <li><strong>目标企业：</strong>30~50家</li>
+        <li><strong>已联系企业：</strong>25~40家（已通过邮件、电话、LinkedIn或行业关系触达）</li>
+        <li><strong>获得明确回复：</strong>10~20家</li>
+        <li><strong>有效客户访谈：</strong>10~15次（与了解生产、设备或模具清洗流程的人完成至少约20分钟沟通）</li>
+        <li><strong>合格客户机会：</strong>3~5家（有真实清洗痛点、激光初步适用、存在采购可能并愿意继续推进）</li>
+        <li><strong>愿意安排现场演示或生产试用：</strong>2~3家</li>
+      </ul>
+
+      <div class="sub-title">4. CRM销售阶段管理</div>
+      <p>每个客户必须按照以下阶段推进和记录：</p>
+      <div class="funnel">
+        <div class="funnel-step"><span class="step-icon" style="background:#a09888;">1</span><span class="step-label">目标企业</span><span class="step-note">列入名单</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#a09888;">2</span><span class="step-label">已联系</span><span class="step-note">邮件、电话、LinkedIn触达</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#8a9a7a;">3</span><span class="step-label">有回复</span><span class="step-note">获得明确回复</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#8a9a7a;">4</span><span class="step-label">已访谈</span><span class="step-note">完成有效访谈</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#8b6914;">5</span><span class="step-label">合格机会</span><span class="step-note">通过筛选标准</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#8b6914;">6</span><span class="step-label">已演示</span><span class="step-note">完成现场演示</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#b85450;">7</span><span class="step-label">生产试用</span><span class="step-note">3~5天试用</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#b85450;">8</span><span class="step-label">已报价</span><span class="step-note">正式报价</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#b85450;">9</span><span class="step-label">决策中</span><span class="step-note">等待采购决策</span></div>
+        <div class="funnel-step"><span class="step-icon" style="background:#5a7a7a;">10</span><span class="step-label">成交 / 暂缓 / 失败</span></div>
+      </div>
+      <p style="margin-top:6px;font-size:0.78rem;color:#7a6a5a;">每个客户必须记录：当前阶段、负责人、下一步行动、下一步日期、预计采购时间、失败或暂停原因。</p>
+
+      <div class="sub-title">5. 失败原因分类</div>
+      <p style="font-size:0.8rem;font-family:-apple-system,"PingFang SC",sans-serif;color:#5a4a3a;">没有明显痛点 · 激光不适用 · 没有预算 · 采购周期太长 · 担心安全 · 价格过高 · 需要本地售后 · 已有替代方案 · 无法安排现场测试 · 时间不合适</p>
+
+      <div class="sub-title">6. 五阶段客户转化流程</div>
+
+      <div class="stage-card">
+        <h4>阶段一：远程资格筛选</h4>
+        <p>客户无需承担费用。通过电话、视频或邮件收集：工厂类型、模具和污染物照片、当前清洗方法、清洗频率、每次清洗人数和时间、是否影响生产、下一次计划清洗时间、生产/设备/维修/采购联系人。</p>
+        <p style="margin-top:4px;"><strong>只有以下客户才继续推进：</strong>有真实清洗问题；激光初步可能适用；当前方法存在明显成本或效率问题；愿意让真正了解生产的人参与；成功后存在采购可能。</p>
+      </div>
+
+      <div class="stage-card">
+        <h4>阶段二：案例和视频沟通</h4>
+        <p>使用中国工厂案例、清洗前后视频、时间和人工对比、安全与操作说明。目标不是马上成交，而是争取一次由生产、设备、维修或管理人员参与的技术沟通。</p>
+      </div>
+
+      <div class="stage-card">
+        <h4>阶段三：免费现场小演示</h4>
+        <p>对已筛选合格、位于重点区域或演示路线内的客户，安排约60~90分钟的小范围现场演示。</p>
+        <p style="margin-top:4px;"><strong>公司负责：</strong>携带演示设备、核心区域内正常送达、防护用品、初始参数、小区域清洗、清洗前后记录。</p>
+        <p><strong>客户负责：</strong>提供真实模具/工件/代表性污染物、合适电源和安全作业区、安排了解生产和采购的人在场、提供原有清洗方式/时间和人工数据。</p>
+        <p><strong>免费演示不对所有冷客户开放，需确认：</strong>有真实清洗任务、关键人员愿意到场、演示成功后愿意进一步试用、地理位置在合理路线内、存在实际采购可能。</p>
+      </div>
+
+      <div class="stage-card">
+        <h4>阶段四：3~5天生产试用</h4>
+        <p>小演示成功后，在客户真实清洗周期内将设备留在现场3~5个工作日。对外名称使用：Production Validation Trial / On-Site Production Trial / Try Before You Buy Program。不要将其主要描述为普通短租。</p>
+        <p style="margin-top:4px;"><strong>具体规则：</strong>送达当天检查现场安全；记录设备型号、序列号和状态；完成操作和安全培训；只允许指定人员使用；限定允许清洗的材料和工件；每天记录使用时间和清洗对象；提前定义成功标准；试用到期后按时回收；不允许无限期滞留；客户购买时可直接保留当前设备；不购买则按约定日期回收。</p>
+      </div>
+
+      <div class="stage-card">
+        <h4>阶段五：试用转购买</h4>
+        <p>试用结束当天安排复盘会议，讨论：是否达到清洗效果、是否节省时间和人工、是否减少停机、是否造成表面损伤、操作人员是否掌握、是否还有安全或技术顾虑、谁批准采购、预计决策日期。</p>
+        <p style="margin-top:4px;">客户选择：①直接购买试用机；②订购一台新机；③暂不购买，由公司按时回收。</p>
+      </div>
+
+      <div class="sub-title">7. 阶段性试用收费策略</div>
+      <p><strong>前3~5个美国标杆客户：</strong></p>
+      <ul>
+        <li>可以免费或极低费用提供生产试用</li>
+        <li>公司承担核心区域内正常送达与回收</li>
+        <li>目的不是赚租金，而是建立美国本地案例</li>
+      </ul>
+      <p>客户必须提供非现金承诺：指定负责人；提供原清洗数据；决策人参与复盘；允许记录试用结果；成功后允许匿名或实名形成案例；在约定时间内作出购买或不购买决定；签署设备、安全和损坏责任协议。</p>
+      <p><strong>拥有2~3个美国案例后：</strong></p>
+      <ul>
+        <li>改为固定Production Trial Package</li>
+        <li>包含送达、回收、培训和3~5天试用</li>
+        <li>客户在15~30天内购买时，试用费部分或全部抵扣货款</li>
+        <li>长途运输、住宿、特殊搬运和设备损坏不自动抵扣</li>
+      </ul>
+      <p>2026年不开展长期租赁；短期试用是销售工具，不是独立租赁业务；不自行提供长期分期融资；客户需要融资时，再考虑第三方设备融资公司。</p>
+
+      <div class="sub-title">8. 美国标杆客户计划</div>
+      <p>2026年优先争取三类美国参考客户：</p>
+      <div class="ref-card">
+        <h4>一家滚塑生产厂</h4>
+        <p>可提供：免费或优惠生产试用、创始客户价格、更直接的技术支持、优先备件服务。</p>
+      </div>
+      <div class="ref-card">
+        <h4>一家模具制造或维修企业</h4>
+        <p>可提供：免费或优惠生产试用、创始客户价格、更直接的技术支持、优先备件服务。</p>
+      </div>
+      <div class="ref-card">
+        <h4>一家其他塑料或橡胶加工企业</h4>
+        <p>可提供：免费或优惠生产试用、创始客户价格、更直接的技术支持、优先备件服务。</p>
+      </div>
+      <p>希望换取：真实数据、清洗视频、客户评价、案例使用许可、推荐信、必要时允许潜在客户向其了解使用体验。</p>
+
+      <div class="sub-title">9. 区域演示策略</div>
+      <p>2026年不全国随机跑客户：</p>
+      <ol>
+        <li>先锁定1~2个客户较集中的区域</li>
+        <li>每个区域筛选10~20家目标企业</li>
+        <li>提前4~6周安排演示路线</li>
+        <li>一次行程覆盖多家工厂</li>
+        <li>将小演示、生产试用和设备回收串联</li>
+        <li>原则上每次跨州行程至少安排2~4家客户交流</li>
+      </ol>
+      <p>区域路线示例：</p>
+      <ul>
+        <li>Midwest Mold Cleaning Demo Week</li>
+        <li>Ohio-Pennsylvania Production Trial Route</li>
+        <li>Rotomolding Customer Trial Week</li>
+      </ul>
+      <p>不为一个完全陌生的冷客户单独横跨美国运输设备。同一区域客户数量达到一定程度后，再组织演示周。核心区域外客户等待下一次区域演示路线，或承担额外差旅成本。</p>
+
+      <div class="sub-title">10. 试用成功标准</div>
+      <p>每次现场演示或生产试用前，提前选择2~4项作为成功标准：</p>
+      <div class="criteria-grid">
+        <div class="criteria-item">清洗效果</div>
+        <div class="criteria-item">单位面积清洗时间</div>
+        <div class="criteria-item">人工节省</div>
+        <div class="criteria-item">停机减少</div>
+        <div class="criteria-item">模具表面无损伤</div>
+        <div class="criteria-item">操作学习时间</div>
+        <div class="criteria-item">烟尘和现场影响</div>
+        <div class="criteria-item">单次清洗成本</div>
+      </div>
+      <p>试用结束后必须根据上述指标复盘，不只用"效果不错"模糊评价。</p>
+      <p>同时确认客户是否允许：拍摄、使用匿名数据、使用客户名称、引用客户评价、让其他潜在客户联系了解体验。</p>
+
+      <div class="sub-title">11. 小型测试和辅助设备</div>
       <p>2026年只记录需求，不增加产品。重点记录客户使用的检测设备、采购价格高或易损坏的产品、可一起交付的产品、被反复提及的需求。2027年再选择1~3种验证。</p>
 
-      <div class="sub-title">3. 品牌节奏</div>
+      <div class="sub-title">12. 品牌节奏</div>
       <p><strong>2026年：</strong>一个宽泛公司名称 + 一个简单网站，不建独立品牌、不申请商标、不设置多个DBA。<strong>出现稳定订单后：</strong>再决定是否建立业务品牌、申请商标、拆分公司。</p>
+
+      <div class="sub-title">13. 公司提供的完整解决方案</div>
+      <ol>
+        <li>清洗需求评估</li>
+        <li>现有方法分析</li>
+        <li>激光适用性判断</li>
+        <li>现场演示</li>
+        <li>短期生产试用</li>
+        <li>时间、人工、耗材和停机成本对比</li>
+        <li>设备选型</li>
+        <li>安全附件</li>
+        <li>培训</li>
+        <li>有限保修</li>
+        <li>远程诊断</li>
+        <li>备件支持</li>
+      </ol>
     </section>
 
     <!-- ================================================================ -->
-    <!-- 六：专业顾问                                                       -->
+    <!-- 六：公司、身份与专业顾问                                            -->
     <!-- ================================================================ -->
     <section id="sec6">
-      <h2 class="section-title"><span class="num">六</span>专业顾问时间线</h2>
+      <h2 class="section-title"><span class="num">六</span>公司、身份与专业顾问</h2>
 
+      <div class="sub-title">1. 公司注册</div>
+      <ul>
+        <li>完成美国公司实体的法律注册</li>
+        <li>申请EIN</li>
+        <li>开立公司银行账户</li>
+        <li>建立基础会计记录</li>
+        <li>个人账户和公司账户分离</li>
+        <li>明确本人能够在美开展哪些活动</li>
+        <li>客户反馈积极后再决定是否启动E-2申请</li>
+      </ul>
+
+      <div class="sub-title">2. 专业顾问触发节点</div>
       <div class="tl-inline">
         <div class="tl-item">
           <div class="tl-date">7~8月</div>
@@ -900,12 +1120,12 @@
           <div class="tl-desc">不集中寻找顾问，只记录需要确认的问题</div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">9月下旬~10月</div>
+          <div class="tl-date">客户验证积极后</div>
           <div class="tl-title">优先联系</div>
           <div class="tl-desc">第一优先：移民律师（身份、工作边界、E-2路径）。第二优先：跨境CPA（税务、记账、资金记录、收入方式）</div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">运机器前</div>
+          <div class="tl-date">准备进口前</div>
           <div class="tl-title">进口准备</div>
           <div class="tl-desc">激光产品合规顾问、报关行、产品责任保险经纪</div>
         </div>
@@ -918,10 +1138,52 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- 七：招聘计划                                                       -->
+    <!-- 七：供应商、进口与合规                                              -->
     <!-- ================================================================ -->
     <section id="sec7">
-      <h2 class="section-title"><span class="num">七</span>招聘计划</h2>
+      <h2 class="section-title"><span class="num">七</span>供应商、进口与合规</h2>
+
+      <div class="sub-title">1. 供应商确认事项</div>
+      <p>在正式销售美国市场前，须与供应商逐一确认：</p>
+      <ul>
+        <li>美国市场销售权限</li>
+        <li>采购价格和价格有效期</li>
+        <li>最低订购量</li>
+        <li>生产和交货周期</li>
+        <li>是否允许销售演示机</li>
+        <li>英文说明书和安全标签</li>
+        <li>FDA相关报告和产品资料</li>
+        <li>设备准确型号、功率、波长和激光等级</li>
+        <li>备件价格与供货周期</li>
+        <li>远程技术支持时间</li>
+        <li>客户保修与供应商保修如何衔接</li>
+        <li>重大故障责任</li>
+        <li>软件和控制系统版本</li>
+        <li>客户信息保护</li>
+        <li>供应商不得绕开公司直接联系客户</li>
+      </ul>
+
+      <div class="risk-card">
+        <p><strong>风险提示：</strong>如果供应商无法提供必要的合规资料、稳定技术支持、备件方案和客户保护，即使设备清洗效果良好，也不能直接扩大美国销售。</p>
+      </div>
+
+      <div class="sub-title">2. 进口准备</div>
+      <ul>
+        <li>FDA与其他产品合规</li>
+        <li>HS编码和关税</li>
+        <li>进口主体和报关行</li>
+        <li>产品责任保险</li>
+        <li>激光现场安全、烟尘净化</li>
+        <li>备件与维修</li>
+        <li>供应商质量和售后责任</li>
+      </ul>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 八：招聘计划                                                       -->
+    <!-- ================================================================ -->
+    <section id="sec8">
+      <h2 class="section-title"><span class="num">八</span>招聘计划</h2>
 
       <div class="sub-title">2026年</div>
       <p>不招聘助理，不招聘美国全职员工。本人主导全部工作。必要时购买短期项目服务：网站排版、视频剪辑、英文校对、临时技术支持。</p>
@@ -937,32 +1199,35 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- 八：资金计划                                                       -->
+    <!-- 九：资金计划                                                       -->
     <!-- ================================================================ -->
-    <section id="sec8">
-      <h2 class="section-title"><span class="num">八</span>资金计划</h2>
+    <section id="sec9">
+      <h2 class="section-title"><span class="num">九</span>资金计划</h2>
 
       <div class="fund-card">
         <h4>第一阶段 <span class="fund-amount">10万~20万元</span></h4>
-        <p>7月~10月：江西学习、工厂案例、网站和销售资料、公司基础准备、美国差旅和生活、手机与银行、客户拜访、基础样品和材料</p>
+        <p>江西学习、工厂案例、网站和销售资料、公司设立及首年基础维护准备、美国市场验证、个人赴美生活、手机和银行、客户访谈、基础样品和材料。</p>
       </div>
       <div class="fund-card">
         <h4>第二阶段 <span class="fund-amount">25万~45万元</span></h4>
-        <p>启动条件：产品案例可信 + 3~5个真实客户机会 + 客户愿意进一步试洗或演示 + 初步确认进口和安全可行。用途：演示设备、安全附件、烟尘处理、运输和报关、专业顾问、产品责任保险、备件、车辆或运输方案</p>
+        <p><strong>启动条件：</strong>产品案例可信 + 3~5个真实客户机会 + 客户愿意进一步试洗或演示 + 初步确认进口和安全可行。</p>
+        <p><strong>用途：</strong>演示设备、安全附件、烟尘处理、Rotoplas参会及行业验证、客户现场演示、3~5天生产试用、演示设备送达和回收、必要的短期仓储、运输工具或租车、专业顾问、产品责任保险、备件。</p>
       </div>
       <div class="fund-card">
         <h4>第三阶段 <span class="fund-amount">30万~60万元</span></h4>
-        <p>启动条件：获得订单 / 确定正式E-2方案 / 市场反馈明显支持扩大。用途：运营储备、备用设备、E-2申请、展会、备件库存、2027年新产品验证、后续招聘</p>
+        <p><strong>启动条件：</strong>获得订单 / 确定正式E-2方案 / 市场反馈明显支持扩大。</p>
+        <p><strong>用途：</strong>订单垫资、现金流周转、保修准备金、退款和异常支出储备、六个月运营储备、备用设备、E-2申请、备件库存、2027年新产品验证、后续招聘。</p>
       </div>
 
       <blockquote><strong>第一年暂定资金授权上限：65万~125万元人民币，分阶段释放。</strong></blockquote>
+      <p style="font-size:0.8rem;color:#7a6a5a;">个人生活支出与公司经营支出分别记录。</p>
     </section>
 
     <!-- ================================================================ -->
-    <!-- 九：售后保修                                                       -->
+    <!-- 十：售后与保修                                                     -->
     <!-- ================================================================ -->
-    <section id="sec9">
-      <h2 class="section-title"><span class="num">九</span>售后与保修计划</h2>
+    <section id="sec10">
+      <h2 class="section-title"><span class="num">十</span>售后与保修计划</h2>
       <p>12个月有限保修。三级支持体系：</p>
       <ul>
         <li><strong>一级：远程诊断</strong>：视频检查、报警记录、参数日志、指导更换小配件</li>
@@ -973,10 +1238,10 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- 十：每周节奏                                                       -->
+    <!-- 十一：每周节奏                                                     -->
     <!-- ================================================================ -->
-    <section id="sec10">
-      <h2 class="section-title"><span class="num">十</span>每周工作节奏</h2>
+    <section id="sec11">
+      <h2 class="section-title"><span class="num">十一</span>每周执行节奏</h2>
 
       <p>每周设置：<strong>1个核心成果</strong> + <strong>3项关键行动</strong> + 不超过<strong>5项维持性任务</strong>。</p>
 
@@ -994,10 +1259,94 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- 十二：待弄清楚的信息                                                -->
+    <!-- 十二：关键决策门                                                   -->
     <!-- ================================================================ -->
     <section id="sec12">
-      <h2 class="section-title"><span class="num">十二</span>目前仍需弄清楚的信息</h2>
+      <h2 class="section-title"><span class="num">十二</span>关键决策门</h2>
+      <p class="tab-intro">全年五个决策门，每个结论决定是否继续、调整方向或暂停投入。</p>
+
+      <div class="gate-grid">
+        <div class="gate-card">
+          <div class="g-label">决策门一</div>
+          <div class="g-date">8月17日</div>
+          <div class="g-title">设备是否有效、稳定且基本安全？</div>
+          <div class="g-desc">清洗效果是否稳定？是否会明显损伤目标模具？是否可以形成可信案例？供应商是否愿意长期支持？基础售后是否可行？</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门二</div>
+          <div class="g-date">9月4日</div>
+          <div class="g-title">赴美基础准备是否完成？</div>
+          <div class="g-desc">产品学习 + 工厂案例 + 网站和介绍材料 + 客户名单 + 赴美文件。此时不要求解决全部法律和税务问题。</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门三</div>
+          <div class="g-date">10月17日</div>
+          <div class="g-title">美国市场验证是否通过？</div>
+          <div class="g-desc">截至10月17日，至少完成10~15次有效客户访谈，形成3个合格客户机会，其中至少2个愿意安排现场演示或生产试用；同时基本明确客户痛点、购买参与人和初步价格反馈。未通过则调整策略，而非继续扩大投入。</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门四</div>
+          <div class="g-date">Rotoplas结束后</div>
+          <div class="g-title">滚塑行业是否值得作为2027年重点？</div>
+          <div class="g-desc">客户是否普遍认可清洗问题？是否愿意进一步试用？主要采购障碍是什么？是否值得2027年正式参展？</div>
+        </div>
+
+        <div class="gate-card">
+          <div class="g-label">决策门五</div>
+          <div class="g-date">2026年12月底</div>
+          <div class="g-title">2026年是否已证明业务可行？</div>
+          <div class="g-desc">客户愿意付钱 + 产品可合法进口和交付 + 单台毛利基本成立 + 售后责任可承担 + 市场不只依赖单一关系 + 业务有继续复制的可能。通过则2027年扩大投资、增加产品和招聘。</div>
+        </div>
+      </div>
+
+      <div class="sub-title" style="margin-top:28px;">投入顺序</div>
+      <blockquote>证明设备有效 → 做出可信案例 → 证明目标客户有问题 → 证明客户愿意试用或进一步了解 → 确认进口与安全可行 → 证明客户愿意付钱 → 证明毛利和售后可承担 → 扩大销售、产品和团队</blockquote>
+
+      <div class="sub-title">2026年三档目标</div>
+      <div class="tier-grid">
+        <div class="tier-card low">
+          <h4>最低目标</h4>
+          <ul>
+            <li>完成设备学习和工厂案例</li>
+            <li>完成10~15次有效客户访谈</li>
+            <li>获得3个合格客户机会</li>
+            <li>获得2家愿意现场演示或生产试用的客户</li>
+            <li>基本确认进口和销售是否可行</li>
+          </ul>
+        </div>
+        <div class="tier-card base">
+          <h4>基准目标</h4>
+          <ul>
+            <li>完成2~3次美国现场演示</li>
+            <li>完成1~2次生产试用</li>
+            <li>获得一笔订金、付费试点或正式订单</li>
+            <li>建立一家美国参考客户</li>
+          </ul>
+        </div>
+        <div class="tier-card ambitious">
+          <h4>进取目标</h4>
+          <ul>
+            <li>获得1~3台设备订单</li>
+            <li>形成2个以上美国客户案例</li>
+            <li>明确2027年重点区域和销售渠道</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-title">2026年成功的最低标准</div>
+      <blockquote class="principle-block">
+        不是卖出很多台设备，而是：知道目标客户是谁、问题是否真实、设备是否有效、客户是否愿意继续试用或付钱，以及这项业务是否值得在2027年扩大。
+      </blockquote>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- 十三：待确认信息                                                   -->
+    <!-- ================================================================ -->
+    <section id="sec13">
+      <h2 class="section-title"><span class="num">十三</span>目前仍需弄清楚的信息</h2>
 
       <div class="sub-sub-title">8月17日前</div>
       <ul>
@@ -1044,20 +1393,6 @@
         <li>退款和取消、交付验收</li>
         <li>保修排除、责任限制</li>
       </ul>
-    </section>
-
-    <!-- ================================================================ -->
-    <!-- 十三：执行标准                                                     -->
-    <!-- ================================================================ -->
-    <section id="sec13">
-      <h2 class="section-title"><span class="num">十三</span>计划完整性与执行标准</h2>
-
-      <p>本计划已覆盖：长期公司目标、2026年至2029年经营目标、产品和客户、公司注册与收款、个人赴美落地、身份与税务、进口与合规、资金投入、售后和保修、招聘、新产品、Rotoplas、周度执行、继续或停止的决策标准。目前没有重大板块遗漏。</p>
-
-      <blockquote class="principle-block">
-        <strong>2026年成功的最低标准</strong>不是卖出很多台设备，而是：知道目标客户是谁、问题是否真实、设备是否有效、客户是否愿意继续试用或付钱，以及这项业务是否值得在2027年扩大。<br><br>
-        <strong>2026年理想成果：</strong>在完成上述验证的基础上，获得首批付费订单，并建立可以继续执行的公司、进口、销售和售后路径。
-      </blockquote>
     </section>
 
     <p style="text-align:center;margin-top:48px;font-size:0.75rem;color:#a09888;">&mdash; 计划完成 &mdash;</p>
